@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:scrollbar-default {
+      scrollbar-width: auto;
+      -ms-overflow-style: auto;
+    }
+    .lg\:scrollbar-default::-webkit-scrollbar {
+      display: initial;
+    }
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: bricolageGrotesque;
+  src: url("/fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf");
+}
+
+* {
+  outline: 0;
+}
+
+.no-transitions * {
+  transition: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: bricolageGrotesque;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-300);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-400);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-800);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-600);
+}

@@ -1,0 +1,1084 @@
+"use client";
+
+import { useState } from "react";
+
+import ActiveAvatar from "@/app/components/ui/avatars/ActiveAvatar";
+import AvatarGroup from "@/app/components/ui/avatars/AvatarGroup";
+import AvatarGroupWithCount from "@/app/components/ui/avatars/AvatarGroupWithCount";
+import BasicAvatar from "@/app/components/ui/avatars/BasicAvatar";
+import BusyAvatar from "@/app/components/ui/avatars/BusyAvatar";
+import InactiveAvatar from "@/app/components/ui/avatars/InactiveAvatar";
+import PendingAvatar from "@/app/components/ui/avatars/PendingAvatar";
+import SquareAvatar from "@/app/components/ui/avatars/SquareAvatar";
+import ActiveBadge from "@/app/components/ui/badges/ActiveBadge";
+import DualToneSlider from "@/app/components/ui/sliders/DualToneSlider";
+import SingleToneSlider from "@/app/components/ui/sliders/SingleToneSlider";
+import SquareThumbSlider from "@/app/components/ui/sliders/SquareThumbSlider";
+import SteppedDotSlider from "@/app/components/ui/sliders/SteppedDotSlider";
+import ValueDisplaySlider from "@/app/components/ui/sliders/ValueDisplaySlider";
+import BasicToggleSwitch from "@/app/components/ui/toggleSwitches/BasicToggleSwitch";
+import SquareToggleSwitch from "@/app/components/ui/toggleSwitches/SquareToggleSwitch";
+import DualHandleRangeSlider from "@/app/components/ui/sliders/DualHandleRangeSlider";
+import LabeledRangeSlider from "@/app/components/ui/sliders/LabeledRangeSlider";
+import DualHandleTooltipSlider from "@/app/components/ui/sliders/DualHandleTooltipSlider";
+import PendingBadge from "@/app/components/ui/badges/PendingBadge";
+import BusyBadge from "@/app/components/ui/badges/BusyBadge";
+import InactiveBadge from "@/app/components/ui/badges/InactiveBadge";
+
+export const componentsData = [
+  // avatars
+  {
+    id: "basic-avatar",
+    name: "Basic Avatar",
+    description:
+      "A circular avatar image with clean rounded corners. Simple and versatile for user profiles.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "profile", "image"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BasicAvatar() {
+  return (
+    <img
+      src="img_url"
+      alt="avatar"
+      className="w-16 aspect-square rounded-full object-cover object-center"
+    />
+  );
+}`,
+      },
+    ],
+    component: () => <BasicAvatar />,
+  },
+  {
+    id: "square-avatar",
+    name: "Square Avatar",
+    description:
+      "A rounded square avatar with softer corners. Modern alternative to circular avatars.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "square", "profile"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function SquareAvatar() {
+  return (
+    <img
+      src="img_url"
+      alt="avatar"
+      className="w-16 aspect-square rounded-2xl object-cover object-center"
+    />
+  );
+}`,
+      },
+    ],
+    component: () => <SquareAvatar />,
+  },
+  {
+    id: "avatar-group",
+    name: "Avatar Group",
+    description:
+      "Multiple overlapping avatars displayed in a row. Perfect for showing team members or participants.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "group", "team"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AvatarGroup() {
+  return (
+    <div className="w-fit flex -space-x-6">
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <AvatarGroup />,
+  },
+  {
+    id: "avatar-group-with-count",
+    name: "Avatar Group With Count",
+    description:
+      "Overlapping avatars with a counter badge showing additional members. Ideal for large groups.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "group", "team", "count"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AvatarGroupWithCount() {
+  return (
+    <div className="w-fit flex -space-x-6">
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-14 aspect-square rounded-full object-cover object-center border-4 border-neutral-50 dark:border-neutral-900"
+      />
+      <div className="w-14 aspect-square rounded-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 border-4 border-neutral-50 dark:border-neutral-900">
+        <span className="font-extrabold text-neutral-500">+99</span>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <AvatarGroupWithCount />,
+  },
+  {
+    id: "active-avatar",
+    name: "Active Avatar",
+    description:
+      "Avatar with a green status indicator showing the user is online or active.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "status", "online"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function ActiveAvatar() {
+  return (
+    <div className="w-16 aspect-square rounded-full flex items-center justify-center relative">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 bg-emerald-300 dark:bg-emerald-500 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-full aspect-square rounded-full object-cover object-center"
+      />
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <ActiveAvatar />,
+  },
+  {
+    id: "pending-avatar",
+    name: "Pending Avatar",
+    description:
+      "Avatar with an orange status indicator showing the user is away or pending.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "status", "away", "pending"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function PendingAvatar() {
+  return (
+    <div className="w-16 aspect-square rounded-full flex items-center justify-center relative">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 bg-orange-300 dark:bg-orange-500 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-16 aspect-square rounded-full object-cover object-center"
+      />
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <PendingAvatar />,
+  },
+  {
+    id: "busy-avatar",
+    name: "Busy Avatar",
+    description:
+      "Avatar with a red status indicator showing the user is busy or do not disturb.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "status", "busy"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BusyAvatar() {
+  return (
+    <div className="w-16 aspect-square rounded-full flex items-center justify-center relative">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 bg-rose-300 dark:bg-rose-500 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-16 aspect-square rounded-full object-cover object-center"
+      />
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <BusyAvatar />,
+  },
+  {
+    id: "inactive-avatar",
+    name: "Inactive Avatar",
+    description:
+      "Avatar with a gray status indicator showing the user is offline or inactive.",
+    category: "Avatars",
+    githubLink: "https://google.com",
+    tags: ["avatar", "status", "offline", "inactive"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function InactiveAvatar() {
+  return (
+    <div className="w-16 aspect-square rounded-full flex items-center justify-center relative">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 bg-neutral-200 dark:bg-neutral-800 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-16 aspect-square rounded-full object-cover object-center"
+      />
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <InactiveAvatar />,
+  },
+  // badges
+  {
+    id: "active-badge",
+    name: "Active Badge",
+    description:
+      "A badge with a green status indicator dot. Shows active or online status.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "online"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function ActiveBadge() {
+  return (
+    <div className="w-fit h-fit px-5 py-2 rounded-full relative bg-neutral-200 dark:bg-neutral-800">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-emerald-300 dark:bg-emerald-500 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      Active
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <ActiveBadge />,
+  },
+  {
+    id: "pending-badge",
+    name: "Pending Badge",
+    description:
+      "A badge with an orange status indicator dot. Shows pending or away status.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "away"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function PendingBadge() {
+  return (
+    <div className="w-fit h-fit px-5 py-2 rounded-full relative bg-neutral-200 dark:bg-neutral-800">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-orange-300 dark:bg-orange-500 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      Pending
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <PendingBadge />,
+  },
+  {
+    id: "busy-badge",
+    name: "Busy Badge",
+    description:
+      "A badge with a red status indicator dot. Shows busy or do not disturb status.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BusyBadge() {
+  return (
+    <div className="w-fit h-fit px-5 py-2 rounded-full relative bg-neutral-200 dark:bg-neutral-800">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-rose-300 dark:bg-rose-500 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      Busy
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <BusyBadge />,
+  },
+  {
+    id: "inactive-badge",
+    name: "Inactive Badge",
+    description:
+      "A badge with a gray status indicator dot. Shows offline or inactive status.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "offline"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function InactiveBadge() {
+  return (
+    <div className="w-fit h-fit px-5 py-2 rounded-full relative bg-neutral-200 dark:bg-neutral-800">
+      <span className="w-5 rounded-full aspect-square absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-neutral-200 dark:bg-neutral-800 border-4 border-neutral-50 dark:border-neutral-900"></span>
+      Inactive
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <InactiveBadge />,
+  },
+  // sliders
+  {
+    id: "single-tone-slider",
+    name: "Single Tone Slider",
+    description:
+      "A minimalist range slider with a dual-ring thumb and solid color track for clear visual feedback.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "basic"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useState } from "react";
+        
+        export default function SingleToneSlider({ defaultValue = 50 }) {
+          const [value, setValue] = useState(defaultValue);
+        
+          return (
+            <input
+              type="range"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="w-full h-2 rounded-full outline-0 appearance-none bg-indigo-500/10 dark:bg-indigo-600/30
+                 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:aspect-square [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:bg-indigo-400 dark:[&::-webkit-slider-thumb]:bg-indigo-500 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-indigo-200 dark:[&::-webkit-slider-thumb]:border-indigo-300
+                 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:aspect-square [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-indigo-400 dark:[&::-moz-range-thumb]:bg-indigo-500 [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-indigo-200 dark:[&::-moz-range-thumb]:border-indigo-300"
+            />
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<SingleToneSlider defaultValue={50} />`,
+      },
+    ],
+    component: () => <SingleToneSlider />,
+  },
+  {
+    id: "square-thumb-slider",
+    name: "Square Thumb Slider",
+    description:
+      "A contemporary slider with a square thumb instead of the traditional circle. Ideal for modern, geometric designs.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "square"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useState } from "react";
+        
+        export default function SquareThumbSlider({ defaultValue = 50 }) {
+          const [value, setValue] = useState(defaultValue);
+        
+          return (
+            <input
+              type="range"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="w-full h-2 outline-0 appearance-none bg-indigo-500/10 dark:bg-indigo-600/30
+                 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:aspect-square [&::-webkit-slider-thumb]:cursor-pointer  [&::-webkit-slider-thumb]:bg-indigo-400 dark:[&::-webkit-slider-thumb]:bg-indigo-500 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-indigo-200 dark:[&::-webkit-slider-thumb]:border-indigo-300
+                 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:aspect-square [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-indigo-400 dark:[&::-moz-range-thumb]:bg-indigo-500 [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-indigo-200 dark:[&::-moz-range-thumb]:border-indigo-300"
+            />
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<SquareThumbSlider defaultValue={50} />`,
+      },
+    ],
+    component: () => <SquareThumbSlider />,
+  },
+  {
+    id: "dual-handle-range-slider",
+    name: "Dual Handle Range Slider",
+    description:
+      "Select minimum and maximum values with independent handles. Features gap constraint to prevent overlap.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "min", "max", "handle"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useEffect, useRef, useState } from "react";
+        
+        export default function SingleToneRangeSlider({
+          min = 0,
+          max = 100,
+          gap = 5,
+          defaultMin = 20,
+          defaultMax = 80,
+        }) {
+          const [minValue, setMinValue] = useState(defaultMin);
+          const [maxValue, setMaxValue] = useState(defaultMax);
+          const [isDraggingMin, setIsDraggingMin] = useState(false);
+          const [isDraggingMax, setIsDraggingMax] = useState(false);
+          const sliderRef = useRef(null);
+        
+          const handleMouseDown = (handle) => {
+            if (handle === "min") {
+              setIsDraggingMin(true);
+            } else {
+              setIsDraggingMax(true);
+            }
+          };
+        
+          const handleMouseMove = (e) => {
+            if (!isDraggingMin && !isDraggingMax) return;
+        
+            const slider = sliderRef.current;
+            const rect = slider.getBoundingClientRect();
+            const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+            const value = Math.round((percentage / 100) * (max - min) + min);
+        
+            if (isDraggingMin) {
+              const newMin = Math.max(min, Math.min(value, maxValue - gap));
+              setMinValue(newMin);
+            } else if (isDraggingMax) {
+              const newMax = Math.min(max, Math.max(value, minValue + gap));
+              setMaxValue(newMax);
+            }
+          };
+        
+          const handleMouseUp = () => {
+            setIsDraggingMin(false);
+            setIsDraggingMax(false);
+          };
+        
+          useEffect(() => {
+            const handleMove = (e) => handleMouseMove(e);
+            const handleUp = () => handleMouseUp();
+        
+            if (isDraggingMin || isDraggingMax) {
+              document.addEventListener("mousemove", handleMove);
+              document.addEventListener("mouseup", handleUp);
+              document.body.style.userSelect = "none";
+              document.body.style.cursor = "pointer";
+        
+              return () => {
+                document.removeEventListener("mousemove", handleMove);
+                document.removeEventListener("mouseup", handleUp);
+                document.body.style.userSelect = "";
+                document.body.style.cursor = "";
+              };
+            }
+          }, [isDraggingMin, isDraggingMax, minValue, maxValue]);
+        
+          const minPercent = ((minValue - min) / (max - min)) * 100;
+          const maxPercent = ((maxValue - min) / (max - min)) * 100;
+        
+          return (
+            <div className="relative w-full py-4">
+              <div className="relative h-2" ref={sliderRef}>
+                {/* Track background */}
+                <div className="absolute w-full h-2 rounded-full bg-indigo-500/10 dark:bg-indigo-600/30"></div>
+        
+                {/* Active range */}
+                <div
+                  className="absolute h-2 rounded-full bg-indigo-300 dark:bg-indigo-400"
+                  style={{
+                    left: \`\${minPercent}%\`,
+                    width: \`\${maxPercent - minPercent}%\`,
+                  }}
+                ></div>
+        
+                {/* Min handle */}
+                <div
+                  className="absolute w-6 h-6 bg-indigo-400 dark:bg-indigo-500 border-4 border-indigo-200 dark:border-indigo-300 rounded-full cursor-pointer active:cursor-pointer transform -translate-x-1/2 -translate-y-1/2 top-1/2"
+                  style={{ left: \`\${minPercent}%\` }}
+                  onMouseDown={() => handleMouseDown("min")}
+                ></div>
+        
+                {/* Max handle */}
+                <div
+                  className="absolute w-6 h-6 bg-indigo-400 dark:bg-indigo-500 border-4 border-indigo-200 dark:border-indigo-300 rounded-full cursor-pointer active:cursor-pointer transform -translate-x-1/2 -translate-y-1/2 top-1/2"
+                  style={{ left: \`\${maxPercent}%\` }}
+                  onMouseDown={() => handleMouseDown("max")}
+                ></div>
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<DualHandleRangeSlider min={0} max={100} gap={5} defaultMin={20} defaultMax={80} />`,
+      },
+    ],
+    component: () => <DualHandleRangeSlider />,
+  },
+  {
+    id: "dual-tone-slider",
+    name: "Dual Tone Slider",
+    description:
+      "A slider with gradient-filled track that visualizes progress. Features dual-ring thumb and smooth color transition.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "gradient", "progress"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useState } from "react";
+        
+        export default function DualToneSlider({ defaultValue = 50 }) {
+          const [value, setValue] = useState(defaultValue);
+        
+          return (
+            <div className="w-full relative">
+              <div className="w-full h-2 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800">
+                <div
+                  className="h-full bg-linear-to-r from-indigo-100 dark:from-indigo-900 to-indigo-300 dark:to-indigo-400"
+                  style={{ width: \`\${value}%\` }}
+                />
+              </div>
+              <input
+                type="range"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                className="absolute top-0 w-full h-2 bg-transparent outline-0 appearance-none
+                   [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:bg-indigo-400 dark:[&::-webkit-slider-thumb]:bg-indigo-500 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-indigo-200 dark:[&::-webkit-slider-thumb]:border-indigo-300
+                   [&::-moz-range-thumb]:w-7 [&::-moz-range-thumb]:h-7 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-indigo-400 dark:[&::-moz-range-thumb]:bg-indigo-500 [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-indigo-200 dark:[&::-moz-range-thumb]:border-indigo-300"
+              />
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<DualToneSlider defaultValue={50} />`,
+      },
+    ],
+    component: () => <DualToneSlider />,
+  },
+  {
+    id: "labeled-range-slider",
+    name: "Labeled Range Slider",
+    description:
+      "Gradient-filled slider with visible min, max, and current value labels. Perfect for precise value selection.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "labeled", "values"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useState } from "react";
+        
+        export default function LabeledRangeSlider({
+          defaultValue = 50,
+          minValue = 20,
+          maxValue = 80,
+        }) {
+          const [value, setValue] = useState(defaultValue);
+          const min = minValue;
+          const max = maxValue;
+        
+          const percentage = ((value - min) / (max - min)) * 100;
+        
+          return (
+            <div className="w-full flex flex-col gap-3">
+              <div className="relative">
+                <div className="w-full h-2 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800">
+                  <div
+                    className="h-full bg-linear-to-r from-indigo-100 dark:from-indigo-900 to-indigo-300 dark:to-indigo-400"
+                    style={{ width: \`\${percentage}%\` }}
+                  />
+                </div>
+                <input
+                  type="range"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  min={min}
+                  max={max}
+                  className="absolute top-0 w-full h-2 bg-transparent outline-0 appearance-none
+                   [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:bg-indigo-400 dark:[&::-webkit-slider-thumb]:bg-indigo-500 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-indigo-200 dark:[&::-webkit-slider-thumb]:border-indigo-300
+                   [&::-moz-range-thumb]:w-7 [&::-moz-range-thumb]:h-7 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-indigo-400 dark:[&::-moz-range-thumb]:bg-indigo-500 [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-indigo-200 dark:[&::-moz-range-thumb]:border-indigo-300"
+                />
+              </div>
+              <div className="w-full flex items-center justify-between gap-5 font-semibold text-neutral-400">
+                <span>{min}</span>
+                <span>{value}</span>
+                <span>{max}</span>
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<LabeledRangeSlider defaultValue={50} minValue={20} maxValue={80} />`,
+      },
+    ],
+    component: () => <LabeledRangeSlider />,
+  },
+  {
+    id: "value-display-slider",
+    name: "Value Display Slider",
+    description:
+      "An interactive slider with a floating badge that displays the current value above the thumb in real-time.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "tooltip"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useState } from "react";
+        
+        export default function ValueDisplaySlider({ defaultValue = 50 }) {
+          const [value, setValue] = useState(defaultValue);
+        
+          return (
+            <div className="w-full relative">
+              <input
+                type="range"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                className="w-full h-2 rounded-full outline-0 appearance-none bg-indigo-500/10 dark:bg-indigo-600/30
+                 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:aspect-square [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:bg-indigo-400 dark:[&::-webkit-slider-thumb]:bg-indigo-500 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-indigo-200 dark:[&::-webkit-slider-thumb]:border-indigo-300
+                 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:aspect-square [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-indigo-400 dark:[&::-moz-range-thumb]:bg-indigo-500 [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-indigo-200 dark:[&::-moz-range-thumb]:border-indigo-300"
+              />
+              <div
+                className="absolute -top-10 bg-indigo-400 dark:bg-indigo-500 text-neutral-50 px-3 py-1 rounded-full text-sm font-semibold"
+                style={{ left: \`\calc(\${value}% - 20px)\` }}
+              >
+                {value}
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<ValueDisplaySlider defaultValue={50} />`,
+      },
+    ],
+    component: () => <ValueDisplaySlider />,
+  },
+  {
+    id: "dual-handle-tooltip-slider",
+    name: "Dual Handle Tooltip Slider",
+    description:
+      "Dual-handle range slider with floating badges showing min and max values in real-time. Includes gap constraint.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "tooltip", "dual"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useEffect, useRef, useState } from "react";
+        
+        export default function DualHandleTooltipSlider({
+          min = 0,
+          max = 100,
+          gap = 5,
+          defaultMin = 20,
+          defaultMax = 80,
+        }) {
+          const [minValue, setMinValue] = useState(defaultMin);
+          const [maxValue, setMaxValue] = useState(defaultMax);
+          const [isDraggingMin, setIsDraggingMin] = useState(false);
+          const [isDraggingMax, setIsDraggingMax] = useState(false);
+          const sliderRef = useRef(null);
+        
+          const handleMouseDown = (handle) => {
+            if (handle === "min") {
+              setIsDraggingMin(true);
+            } else {
+              setIsDraggingMax(true);
+            }
+          };
+        
+          const handleMouseMove = (e) => {
+            if (!isDraggingMin && !isDraggingMax) return;
+        
+            const slider = sliderRef.current;
+            const rect = slider.getBoundingClientRect();
+            const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+            const value = Math.round((percentage / 100) * (max - min) + min);
+        
+            if (isDraggingMin) {
+              const newMin = Math.max(min, Math.min(value, maxValue - gap));
+              setMinValue(newMin);
+            } else if (isDraggingMax) {
+              const newMax = Math.min(max, Math.max(value, minValue + gap));
+              setMaxValue(newMax);
+            }
+          };
+        
+          const handleMouseUp = () => {
+            setIsDraggingMin(false);
+            setIsDraggingMax(false);
+          };
+        
+          useEffect(() => {
+            const handleMove = (e) => handleMouseMove(e);
+            const handleUp = () => handleMouseUp();
+        
+            if (isDraggingMin || isDraggingMax) {
+              document.addEventListener("mousemove", handleMove);
+              document.addEventListener("mouseup", handleUp);
+              document.body.style.userSelect = "none";
+              document.body.style.cursor = "pointer";
+        
+              return () => {
+                document.removeEventListener("mousemove", handleMove);
+                document.removeEventListener("mouseup", handleUp);
+                document.body.style.userSelect = "";
+                document.body.style.cursor = "";
+              };
+            }
+          }, [isDraggingMin, isDraggingMax, minValue, maxValue]);
+        
+          const minPercent = ((minValue - min) / (max - min)) * 100;
+          const maxPercent = ((maxValue - min) / (max - min)) * 100;
+        
+          return (
+            <div className="relative w-full py-4">
+              <div className="relative h-2" ref={sliderRef}>
+                {/* Track background */}
+                <div className="absolute w-full h-2 rounded-full bg-indigo-500/10 dark:bg-indigo-600/30"></div>
+        
+                {/* Active range */}
+                <div
+                  className="absolute h-2 rounded-full bg-indigo-300 dark:bg-indigo-400"
+                  style={{
+                    left: \`\${minPercent}%\`,
+                    width: \`\${maxPercent - minPercent}%\`,
+                  }}
+                ></div>
+        
+                {/* Min handle */}
+                <div
+                  className="absolute w-6 h-6 flex items-center justify-center bg-indigo-400 dark:bg-indigo-500 border-4 border-indigo-200 dark:border-indigo-300 rounded-full cursor-pointer active:cursor-pointer transform -translate-x-1/2 -translate-y-1/2 top-1/2"
+                  style={{ left: \`\${minPercent}%\` }}
+                  onMouseDown={() => handleMouseDown("min")}
+                >
+                  <span className="transform -translate-y-9 flex items-center justify-center bg-indigo-400 dark:bg-indigo-500 text-neutral-50 px-3 py-1 rounded-full text-sm font-semibold">
+                    {minValue}
+                  </span>
+                </div>
+        
+                {/* Max handle */}
+                <div
+                  className="absolute w-6 h-6 flex items-center justify-center bg-indigo-400 dark:bg-indigo-500 border-4 border-indigo-200 dark:border-indigo-300 rounded-full cursor-pointer active:cursor-pointer transform -translate-x-1/2 -translate-y-1/2 top-1/2"
+                  style={{ left: \`\${maxPercent}%\` }}
+                  onMouseDown={() => handleMouseDown("max")}
+                >
+                  <span className="transform -translate-y-9 flex items-center justify-center bg-indigo-400 dark:bg-indigo-500 text-neutral-50 px-3 py-1 rounded-full text-sm font-semibold">
+                    {maxValue}
+                  </span>
+                </div>
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<DualHandleTooltipSlider min={0} max={100} gap={5} defaultMin={20} defaultMax={80} />`,
+      },
+    ],
+    component: () => <DualHandleTooltipSlider />,
+  },
+  {
+    id: "stepped-dot-slider",
+    name: "Stepped Dot Slider",
+    description:
+      "A stepped slider with visual dot indicators that light up as you progress. Perfect for ratings or level selection.",
+    category: "Sliders",
+    githubLink: "https://google.com",
+    tags: ["slider", "input", "range", "steps", "discrete"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { useState } from "react";
+        
+        export default function SteppedDotSlider({
+          defaultValue = 50,
+          steps = [0, 25, 50, 75, 100],
+        }) {
+          const [value, setValue] = useState(defaultValue);
+        
+          const stepSize = steps.length > 1 ? steps[1] - steps[0] : 25;
+        
+          return (
+            <div className="w-full flex items-center justify-center relative">
+              <div className="w-full flex items-center justify-between relative px-1">
+                <div className="absolute left-0 w-full px-1">
+                  <div className="w-full h-0.5 bg-neutral-200 dark:bg-neutral-800"></div>
+                </div>
+                {steps.map((step) => (
+                  <div
+                    key={step}
+                    className={\`\w-4 h-4 rounded-full z-10 transition-colors duration-100 \${
+                      \step <= value
+                        ? "bg-indigo-300 dark:bg-indigo-500"
+                        : "bg-neutral-200 dark:bg-neutral-800"
+                    }\`}
+                  ></div>
+                ))}
+              </div>
+              <input
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                step={stepSize}
+                min={steps[0]}
+                max={steps[steps.length - 1]}
+                type="range"
+                className="absolute z-20 w-full h-2 rounded-full outline-0 appearance-none bg-transparent
+                 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:aspect-square [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:bg-indigo-400 dark:[&::-webkit-slider-thumb]:bg-indigo-500 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-indigo-200 dark:[&::-webkit-slider-thumb]:border-indigo-300
+                 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:aspect-square [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-indigo-400 dark:[&::-moz-range-thumb]:bg-indigo-400 [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-indigo-200 dark:[&::-moz-range-thumb]:border-indigo-300"
+              />
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<SteppedDotSlider defaultValue={50} steps={[0, 25, 50, 75, 100]} />`,
+      },
+    ],
+    component: () => <SteppedDotSlider />,
+  },
+  // toggle switches
+  {
+    id: "basic-toggle-switch",
+    name: "Basic Toggle Switch",
+    description:
+      "A standard toggle switch with a circular thumb that slides between on/off states. Clean and minimal design.",
+    category: "Toggle Switches",
+    githubLink: "https://google.com",
+    tags: ["toggle", "switch", "checkbox"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BasicToggleSwitch({
+  id,
+  value = false,
+  onChange = () => {},
+}) {
+  return (
+    <label htmlFor={id} className="cursor-pointer inline-block">
+      <input
+        id={id}
+        type="checkbox"
+        checked={value}
+        onChange={(e) => onChange(e.target.checked)}
+        className="hidden"
+      />
+      <span className="w-11 h-6 rounded-full flex items-center bg-neutral-200 dark:bg-neutral-800 transition-colors duration-200">
+        <span
+          className={\`\w-4 aspect-square rounded-full bg-neutral-50 dark:bg-neutral-700 transition-transform duration-100 \${
+            value ? "translate-x-6" : "translate-x-1"
+          }\`}
+        ></span>
+      </span>
+    </label>
+  );
+}`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `// parent component
+        
+        "use client";
+        
+        import BasicToggleSwitch from "./BasicToggleSwitch";
+        import { useState } from "react";
+        
+        export default function UsageExample() {
+          const [isChecked, setIsChecked] = useState(false);
+        
+          return (
+            <BasicToggleSwitch
+              id={"basic-toggle-switch"}
+              value={isChecked}
+              onChange={setIsChecked}
+            />
+          );
+        }`,
+      },
+    ],
+    component: () => {
+      const [isBasicToggleSwitchChecked, setIsBasicToggleSwitchChecked] =
+        useState(false);
+      return (
+        <BasicToggleSwitch
+          id={"basic-toggle-switch"}
+          value={isBasicToggleSwitchChecked}
+          onChange={setIsBasicToggleSwitchChecked}
+        />
+      );
+    },
+  },
+  {
+    id: "square-toggle-switch",
+    name: "Square Toggle Switch",
+    description:
+      "A toggle switch with a square thumb instead of the traditional circle. Perfect for modern, geometric designs.",
+    category: "Toggle Switches",
+    githubLink: "https://google.com",
+    tags: ["toggle", "switch", "checkbox", "square"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function SquareToggleSwitch({
+  id,
+  value = false,
+  onChange = () => {},
+}) {
+  return (
+    <label htmlFor={id} className="cursor-pointer inline-block">
+      <input
+        id={id}
+        type="checkbox"
+        checked={value}
+        onChange={(e) => onChange(e.target.checked)}
+        className="hidden"
+      />
+      <span className="w-11 h-6 flex items-center bg-neutral-200 dark:bg-neutral-800 transition-colors duration-200">
+        <span
+          className={\`\w-4 aspect-square bg-neutral-50 dark:bg-neutral-700 transition-transform duration-100 \${
+            value ? "translate-x-6" : "translate-x-1"
+          }\`}
+        ></span>
+      </span>
+    </label>
+  );
+}`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `// parent component
+        
+        "use client";
+        
+        import SquareToggleSwitch from "./SquareToggleSwitch";
+        import { useState } from "react";
+        
+        export default function UsageExample() {
+          const [isChecked, setIsChecked] = useState(false);
+        
+          return (
+            <SquareToggleSwitch
+              id={"basic-toggle-switch"}
+              value={isChecked}
+              onChange={setIsChecked}
+            />
+          );
+        }`,
+      },
+    ],
+    component: () => {
+      const [isSquareToggleSwitchChecked, setIsSquareToggleSwitchChecked] =
+        useState(false);
+      return (
+        <SquareToggleSwitch
+          id={"square-toggle-switch"}
+          value={isSquareToggleSwitchChecked}
+          onChange={setIsSquareToggleSwitchChecked}
+        />
+      );
+    },
+  },
+];
+
+export const getCategories = () => {
+  const categories = [...new Set(componentsData.map((comp) => comp.category))];
+  return categories.sort();
+};
+
+export const getCategoryCount = (category) => {
+  return componentsData.filter((comp) => comp.category === category).length;
+};
