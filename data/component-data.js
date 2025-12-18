@@ -24,6 +24,9 @@ import DualHandleTooltipSlider from "@/app/components/ui/sliders/DualHandleToolt
 import PendingBadge from "@/app/components/ui/badges/PendingBadge";
 import BusyBadge from "@/app/components/ui/badges/BusyBadge";
 import InactiveBadge from "@/app/components/ui/badges/InactiveBadge";
+import BrowserMockup from "@/app/components/ui/mockups/BrowserMockup";
+import BrowserMockupWithUrl from "@/app/components/ui/mockups/BrowserMockupWithUrl";
+import BrowserMockupWithTabs from "@/app/components/ui/mockups/BrowserMockupWithTabs";
 
 export const componentsData = [
   // avatars
@@ -1071,6 +1074,129 @@ export const componentsData = [
         />
       );
     },
+  },
+  // mockups
+  {
+    id: "browser-mockup",
+    name: "Browser Mockup",
+    description:
+      "A simple browser window mockup with macOS-style title bar buttons. Perfect for showcasing web content.",
+    category: "Mockups",
+    githubLink: "https://google.com",
+    tags: ["mockup", "browser", "window"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BrowserMockup() {
+  return (
+    <div className="w-full h-fit rounded-2xl flex flex-col bg-neutral-200/50 dark:bg-neutral-800/60">
+      <div className="w-full h-fit flex gap-1.5 items-center justify-start p-4">
+        <div className="w-3.5 aspect-square rounded-full bg-rose-300 dark:bg-rose-600"></div>
+        <div className="w-3.5 aspect-square rounded-full bg-yellow-300 dark:bg-yellow-600"></div>
+        <div className="w-3.5 aspect-square rounded-full bg-emerald-300 dark:bg-emerald-600"></div>
+      </div>
+      <div className="w-full h-fit flex items-center justify-center p-2.5 pt-0">
+        <div className="w-full h-fit p-20 flex items-center justify-center rounded-xl bg-neutral-200 dark:bg-neutral-800">
+          <p className="text-2xl text-neutral-500">Hello</p>
+        </div>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <BrowserMockup />,
+  },
+  {
+    id: "browser-mockup-with-url",
+    name: "Browser Mockup With URL",
+    description:
+      "A browser mockup with a centered URL bar and title bar buttons. Clean design for web previews.",
+    category: "Mockups",
+    githubLink: "https://google.com",
+    tags: ["mockup", "browser", "url"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BrowserMockupWithUrl() {
+  return (
+    <div className="w-full h-fit rounded-2xl flex flex-col bg-neutral-200/50 dark:bg-neutral-800/60">
+      <div className="w-full h-fit flex items-center justify-between gap-4 px-4 py-2.5">
+        <div className="w-fit h-fit flex gap-1.5 items-center justify-start">
+          <div className="w-3.5 aspect-square rounded-full bg-rose-300 dark:bg-rose-600"></div>
+          <div className="w-3.5 aspect-square rounded-full bg-yellow-300 dark:bg-yellow-600"></div>
+          <div className="w-3.5 aspect-square rounded-full bg-emerald-300 dark:bg-emerald-600"></div>
+        </div>
+        <div className="w-full h-fit px-3 py-1.5 rounded-lg text-sm text-nowrap text-ellipsis line-clamp-1 text-neutral-400 dark:text-neutral-600 bg-neutral-200 dark:bg-neutral-800">
+          https://google.com
+        </div>
+        <div className="w-14"></div>
+      </div>
+      <div className="w-full h-fit flex items-center justify-center p-2.5 pt-0">
+        <div className="w-full h-fit p-20 flex items-center justify-center rounded-xl bg-neutral-200 dark:bg-neutral-800">
+          <p className="text-2xl text-neutral-500">Hello</p>
+        </div>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <BrowserMockupWithUrl />,
+  },
+  {
+    id: "browser-mockup-with-tabs",
+    name: "Browser Mockup With Tabs",
+    description:
+      "A browser mockup featuring a realistic tab design with rounded edges and URL display. Great for multi-tab presentations.",
+    category: "Mockups",
+    githubLink: "https://google.com",
+    tags: ["mockup", "browser", "tab", "url"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function BrowserMockupWithTabs() {
+  return (
+    <div className="w-full h-fit rounded-2xl flex flex-col bg-[#f0f0f0] dark:bg-[#202020]">
+      <div className="w-full h-fit flex items-center justify-start gap-4 px-4 pt-2.5 overflow-hidden">
+        <div className="w-fit h-fit flex shrink-0 gap-1.5 items-center justify-start z-10">
+          <div className="w-3.5 aspect-square rounded-full bg-rose-300 dark:bg-rose-600"></div>
+          <div className="w-3.5 aspect-square rounded-full bg-yellow-300 dark:bg-yellow-600"></div>
+          <div className="w-3.5 aspect-square rounded-full bg-emerald-300 dark:bg-emerald-600"></div>
+        </div>
+        <div className="w-full max-w-40 min-w-0 h-fit rounded-t-xl relative bg-neutral-200 dark:bg-neutral-800">
+          <span className="w-5 h-full flex shrink-0 absolute right-0 translate-x-full bg-neutral-200 dark:bg-neutral-800">
+            <span className="w-full h-full rounded-bl-xl bg-[#f0f0f0] dark:bg-[#202020]"></span>
+          </span>
+          <span className="w-5 h-full flex shrink-0 absolute left-0 -translate-x-full bg-neutral-200 dark:bg-neutral-800">
+            <span className="w-full h-full rounded-br-xl bg-[#f0f0f0] dark:bg-[#202020]"></span>
+          </span>
+          <div className="w-full h-fit p-2.5 flex items-center gap-2.5">
+            <div className="w-3.5 aspect-square flex shrink-0 rounded-full bg-neutral-300 dark:bg-neutral-900/50"></div>
+            <p className="text-sm text-nowrap text-ellipsis line-clamp-1 text-neutral-400 dark:text-neutral-600">
+              https://google.com
+            </p>
+          </div>
+        </div>
+        <div className="w-14 flex shrink-0"></div>
+      </div>
+      <div className="w-full h-fit flex items-center justify-center p-2.5 pt-0">
+        <div className="w-full h-fit p-20 flex items-center justify-center rounded-xl bg-neutral-200 dark:bg-neutral-800">
+          <p className="text-2xl text-neutral-500">Hello</p>
+        </div>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <BrowserMockupWithTabs />,
   },
 ];
 

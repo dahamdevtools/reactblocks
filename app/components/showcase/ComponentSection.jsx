@@ -16,7 +16,7 @@ export default function ComponentSection({ category, components }) {
           if (colCount === 1) {
             colSpan = "xl:col-span-6";
           } else if (colCount === 2) {
-            colSpan = "xl:col-span-3";
+            colSpan = "col-span-6 xl:col-span-3";
           } else if (colCount === 3) {
             colSpan = "xl:col-span-2";
           }
