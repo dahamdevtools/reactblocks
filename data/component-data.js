@@ -27,6 +27,10 @@ import InactiveBadge from "@/app/components/ui/badges/InactiveBadge";
 import BrowserMockup from "@/app/components/ui/mockups/BrowserMockup";
 import BrowserMockupWithUrl from "@/app/components/ui/mockups/BrowserMockupWithUrl";
 import BrowserMockupWithTabs from "@/app/components/ui/mockups/BrowserMockupWithTabs";
+import AnimatedBusyBadge from "@/app/components/ui/badges/BusyBadgePing";
+import AnimatedInactiveBadge from "@/app/components/ui/badges/InactiveBadgePing";
+import AnimatedPendingBadge from "@/app/components/ui/badges/PendingBadgePing";
+import AnimatedActiveBadge from "@/app/components/ui/badges/ActiveBadgePing";
 
 export const componentsData = [
   // avatars
@@ -382,6 +386,118 @@ export const componentsData = [
       },
     ],
     component: () => <InactiveBadge />,
+  },
+  {
+    id: "animated-active-badge",
+    name: "Animated Active Badge",
+    description:
+      "A badge with animated ping effect showing active or online status. Eye-catching indicator.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "online", "animated"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AnimatedActiveBadge() {
+  return (
+    <div className="w-fit h-fit p-2 pe-5 gap-2 flex items-center rounded-full overflow-visible bg-neutral-100 dark:bg-neutral-800">
+      <span className="h-full aspect-square flex items-center justify-center rounded-full overflow-visible relative">
+        <span className="w-3 absolute aspect-square rounded-full animate-ping bg-emerald-300 dark:bg-emerald-500"></span>
+        <span className="w-3 aspect-square rounded-full bg-emerald-300 dark:bg-emerald-500"></span>
+      </span>
+      <p className="text-neutral-500 dark:text-neutral-300">Active</p>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <AnimatedActiveBadge />,
+  },
+  {
+    id: "animated-pending-badge",
+    name: "Animated Pending Badge",
+    description:
+      "A badge with animated ping effect showing pending or away status. Smooth pulsing animation.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "away", "animated"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AnimatedPendingBadge() {
+  return (
+    <div className="w-fit h-fit p-2 pe-5 gap-2 flex items-center rounded-full overflow-visible bg-neutral-100 dark:bg-neutral-800">
+      <span className="h-full aspect-square flex items-center justify-center rounded-full overflow-visible relative">
+        <span className="w-3 absolute aspect-square rounded-full animate-ping bg-orange-300 dark:bg-orange-500"></span>
+        <span className="w-3 aspect-square rounded-full bg-orange-300 dark:bg-orange-500"></span>
+      </span>
+      <p className="text-neutral-500 dark:text-neutral-300">Pending</p>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <AnimatedPendingBadge />,
+  },
+  {
+    id: "animated-busy-badge",
+    name: "Animated Busy Badge",
+    description:
+      "A badge with a green status indicator dot. Shows active or online status.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "animated"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AnimatedBusyBadge() {
+  return (
+    <div className="w-fit h-fit p-2 pe-5 gap-2 flex items-center rounded-full overflow-visible bg-neutral-100 dark:bg-neutral-800">
+      <span className="h-full aspect-square flex items-center justify-center rounded-full overflow-visible relative">
+        <span className="w-3 absolute aspect-square rounded-full animate-ping bg-rose-300 dark:bg-rose-500"></span>
+        <span className="w-3 aspect-square rounded-full bg-rose-300 dark:bg-rose-500"></span>
+      </span>
+      <p className="text-neutral-500 dark:text-neutral-300">Busy</p>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <AnimatedBusyBadge />,
+  },
+  {
+    id: "animated-inactive-badge",
+    name: "Animated Inactive Badge",
+    description:
+      "A badge with a green status indicator dot. Shows active or online status.",
+    category: "Badges",
+    githubLink: "https://google.com",
+    tags: ["badge", "status", "indicator", "offline", "animated"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AnimatedInactiveBadge() {
+  return (
+    <div className="w-fit h-fit p-2 pe-5 gap-2 flex items-center rounded-full overflow-visible bg-neutral-100 dark:bg-neutral-800">
+      <span className="h-full aspect-square flex items-center justify-center rounded-full overflow-visible relative">
+        <span className="w-3 absolute aspect-square rounded-full animate-ping bg-neutral-300 dark:bg-neutral-500"></span>
+        <span className="w-3 aspect-square rounded-full bg-neutral-300 dark:bg-neutral-500"></span>
+      </span>
+      <p className="text-neutral-500 dark:text-neutral-300">Inactive</p>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <AnimatedInactiveBadge />,
   },
   // sliders
   {
