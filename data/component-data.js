@@ -31,7 +31,6 @@ import AnimatedBusyBadge from "@/app/components/ui/badges/BusyBadgePing";
 import AnimatedInactiveBadge from "@/app/components/ui/badges/InactiveBadgePing";
 import AnimatedPendingBadge from "@/app/components/ui/badges/PendingBadgePing";
 import AnimatedActiveBadge from "@/app/components/ui/badges/ActiveBadgePing";
-import TestimonialCard from "@/app/components/ui/cards/TestimonialCard";
 import FloatingCardAccordion from "@/app/components/ui/accordions/FloatingCardAccordion";
 import ContainedAccordion from "@/app/components/ui/accordions/ContainedAccordion";
 import MinimalAccordion from "@/app/components/ui/accordions/MinimalAccordion";
