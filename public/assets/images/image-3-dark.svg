@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 158.75 158.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="image-3-dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.68150253"
+     inkscape:cx="-44.02038"
+     inkscape:cy="329.41918"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern4"
+       preserveAspectRatio="xMidYMid"
+       id="pattern5"
+       patternTransform="matrix(1.2802501,0.22574263,-0.22574263,1.2802501,-261.99998,416.00001)"
+       x="0"
+       y="0"
+       width="19.2"
+       height="19.2" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="16"
+       height="16"
+       patternTransform="translate(-572.00001,363.00001)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern1"
+       inkscape:label="pattern1">
+      <g
+         id="g9"
+         fill="#000000"
+         style="fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1">
+        <circle
+           id="circle8"
+           cx="3"
+           cy="3"
+           r="3"
+           style="fill:#fafafa;fill-opacity:1" />
+        <circle
+           id="circle9"
+           cx="13"
+           cy="13"
+           r="3"
+           style="fill:#fafafa;fill-opacity:1" />
+      </g>
+    </pattern>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="16"
+       height="16"
+       patternTransform="translate(-261.99998,416.00001)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern4"
+       inkscape:label="pattern4">
+      <g
+         id="dots"
+         fill="#000000"
+         style="fill:#171717;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1">
+        <circle
+           id="Oval-377-Copy-9"
+           cx="3"
+           cy="3"
+           r="3"
+           style="fill:#171717;fill-opacity:1" />
+        <circle
+           id="Oval-377-Copy-14"
+           cx="13"
+           cy="13"
+           r="3"
+           style="fill:#171717;fill-opacity:1" />
+      </g>
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1e1e1e;stroke-width:0.264999;fill-opacity:1"
+       id="rect1"
+       width="158.75"
+       height="158.75"
+       x="0"
+       y="0" />
+    <rect
+       style="stroke:none;fill:url(#pattern1)"
+       transform="scale(0.26458333)"
+       width="16"
+       height="16"
+       x="-572.00001"
+       y="363.00001"
+       id="rect2" />
+    <rect
+       style="fill:url(#pattern5);stroke-width:0.264999;fill-opacity:1"
+       id="rect3"
+       width="158.75"
+       height="158.75"
+       x="0"
+       y="0" />
+    <rect
+       style="stroke:none;fill:url(#pattern4)"
+       transform="scale(0.26458333)"
+       width="16"
+       height="16"
+       x="-261.99998"
+       y="416.00001"
+       id="rect4" />
+  </g>
+</svg>

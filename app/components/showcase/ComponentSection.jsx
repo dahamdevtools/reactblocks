@@ -14,11 +14,11 @@ export default function ComponentSection({ category, components }) {
           const colCount = component.columns || 1;
           let colSpan = "";
           if (colCount === 1) {
-            colSpan = "xl:col-span-6";
+            colSpan = "col-span-1 md:col-span-2 xl:col-span-6";
           } else if (colCount === 2) {
-            colSpan = "col-span-6 xl:col-span-3";
+            colSpan = "col-span-1 md:col-span-2 xl:col-span-3";
           } else if (colCount === 3) {
-            colSpan = "xl:col-span-2";
+            colSpan = "col-span-1 md:col-span-1 xl:col-span-2";
           }
           return (
             <div key={component.id} className={colSpan}>

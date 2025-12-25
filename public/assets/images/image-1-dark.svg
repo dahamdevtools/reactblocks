@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="500"
+   viewBox="0 0 211.66666 132.29167"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="image-1-dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.24094753"
+     inkscape:cx="-307.12081"
+     inkscape:cy="454.45579"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern4"
+       preserveAspectRatio="xMidYMid"
+       id="pattern5"
+       patternTransform="matrix(0.5795555,0.15529143,-0.15529143,0.5795555,-394.00003,576.99999)"
+       x="0"
+       y="0" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="40.000025"
+       height="39.999987"
+       patternTransform="translate(-404.00001,453.99999)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern2"
+       inkscape:label="pattern2">
+      <path
+         id="path7"
+         d="M 0,38.589997 2.8299969,35.76 4.2400252,37.169991 1.4100283,39.999987 H 0 Z M 0,1.4000126 2.8299969,4.2300094 4.2400252,2.8200189 1.4100283,3.7795276e-5 H 0 V 1.4100283 Z M 38.589997,39.999987 35.76,37.169991 37.170028,35.76 l 2.829997,2.829997 v 1.40999 z M 40.000025,1.4100283 37.170028,4.2400252 35.76,2.8299969 38.589997,0 h 1.410028 z M 20.000013,18.6 22.830009,15.770003 24.24,17.179994 21.410003,20.000013 24.24,22.830009 22.830009,24.24 20.000013,21.410003 17.170016,24.24 l -1.409991,-1.409991 2.829997,-2.829996 -2.829997,-2.829997 1.409991,-1.409991 2.829997,2.829997 z"
+         style="fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999" />
+    </pattern>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="40.000014"
+       height="39.999987"
+       patternTransform="translate(-394.00003,576.99999)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern4"
+       inkscape:label="pattern4">
+      <path
+         id="Combined-Shape"
+         d="M 0,38.589997 2.8299969,35.76 4.2400252,37.169991 1.4100283,39.999987 H 0 Z M 0,1.4000126 2.8299969,4.2300094 4.2400252,2.8200189 1.4100283,0 H 0 V 1.4100283 Z M 38.590012,39.999987 35.760011,37.169991 37.170009,35.76 l 2.830005,2.829997 v 1.40999 z M 40.000014,1.4100283 37.170009,4.2400252 35.760011,2.8299969 38.590012,0 h 1.410002 z M 20.000009,18.6 l 2.83,-2.829997 1.410002,1.410028 -2.83,2.819982 2.83,2.829996 -1.410002,1.409991 -2.83,-2.829997 -2.830001,2.829997 -1.409983,-1.409991 2.829986,-2.829996 -2.829986,-2.829997 1.409983,-1.409991 2.830001,2.829997 z"
+         style="fill:#171717;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999" />
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1e1e1e;stroke:none;stroke-width:0.264999;fill-opacity:1"
+       id="rect1"
+       width="211.66666"
+       height="132.29167"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:url(#pattern5);stroke:none;stroke-width:0.264999;fill-opacity:1"
+       id="rect2"
+       width="211.66666"
+       height="132.29167"
+       x="0"
+       y="0" />
+    <rect
+       style="stroke:none;fill:url(#pattern2)"
+       transform="scale(0.26458333)"
+       width="40.000025"
+       height="39.999987"
+       x="-404.00001"
+       y="453.99999"
+       id="rect3" />
+    <rect
+       style="stroke:none;fill:url(#pattern4)"
+       transform="scale(0.26458333)"
+       width="40.000014"
+       height="39.999987"
+       x="-394.00003"
+       y="576.99999"
+       id="rect4" />
+  </g>
+</svg>

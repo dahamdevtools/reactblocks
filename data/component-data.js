@@ -35,6 +35,15 @@ import FloatingCardAccordion from "@/app/components/ui/accordions/FloatingCardAc
 import ContainedAccordion from "@/app/components/ui/accordions/ContainedAccordion";
 import MinimalAccordion from "@/app/components/ui/accordions/MinimalAccordion";
 import BorderedAccordion from "@/app/components/ui/accordions/BorderedAccordion";
+import QuoteFirstTestimonial from "@/app/components/ui/testimonials/QuoteFirstTestimonial";
+import AuthorFirstTestimonial from "@/app/components/ui/testimonials/AuthorFirstTestimonial";
+import CenteredTestimonial from "@/app/components/ui/testimonials/CenteredTestimonial";
+import FloatingAvatarTestimonial from "@/app/components/ui/testimonials/FloatingAvatarTestimonial";
+import FeaturedTestimonial from "@/app/components/ui/testimonials/FeaturedTestimonial";
+import CallToActionBanner from "@/app/components/ui/layouts/CallToActionBanner";
+import VerticalProductImageGallery from "@/app/components/ui/imageGalleries/VerticalProductImageGallery";
+import HorizontalProductImageGallery from "@/app/components/ui/imageGalleries/HorizontalProductImageGallery";
+import LoginForm from "@/app/components/ui/auth/LoginForm";
 
 export const componentsData = [
   // avatars
@@ -1990,6 +1999,602 @@ export const componentsData = [
       },
     ],
     component: () => <BrowserMockupWithTabs />,
+  },
+  // layouts
+  {
+    id: "call-to-action-banner",
+    name: "Call To Action Banner",
+    description:
+      "A centered call-to-action component featuring a headline, descriptive text, a primary action button, and feature highlights separated by a divider.",
+    category: "Layouts",
+    githubLink: "https://google.com",
+    tags: ["cta", "banner", "marketing"],
+    columns: 1,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function CallToActionBanner() {
+  return (
+    <div className="w-full h-fit flex flex-col items-center gap-5 px-8 pt-10 sm:pt-13 pb-8 rounded-3xl bg-neutral-200/50 dark:bg-neutral-800/60">
+      <h3 className="text-2xl sm:text-3xl font-semibold text-center">
+        Ready to transform your workflow?
+      </h3>
+      <p className="text-lg sm:text-xl text-center">
+        Join thousands of teams already building faster and smarter.
+      </p>
+      <button className="w-fit h-fit px-8 py-3.5 rounded-2xl cursor-pointer bg-neutral-300 dark:bg-neutral-900">
+        Get Started
+      </button>
+      <div className="w-full h-fit flex flex-col sm:flex-row justify-center items-center gap-1.5 sm:gap-5">
+        <p className="sm:flex-1 text-center sm:text-right text-neutral-500">
+          Start your free trial today
+        </p>
+        <div className="w-1/2 sm:w-0.5 h-0.5 sm:h-10 shrink-0 bg-neutral-200 dark:bg-neutral-800"></div>
+        <p className="sm:flex-1 text-center sm:text-left text-neutral-500">
+          No credit card required
+        </p>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <CallToActionBanner />,
+  },
+  // testimonials
+  {
+    id: "quote-first-testimonial",
+    name: "Quote First Testimonial",
+    description:
+      "Testimonial card with quote displayed first, followed by author info. Clean horizontal layout.",
+    category: "Testimonials",
+    githubLink: "https://google.com",
+    tags: ["testimonial", "card", "review"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function QuoteFirstTestimonial() {
+  return (
+    <div className="w-full h-fit flex flex-col gap-6 p-6 pt-8 rounded-3xl bg-[#f0f0f0] dark:bg-[#202020]">
+      <p className="px-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sint
+        tenetur quibusdam modi ipsum maiores dicta deserunt fugit excepturi
+        voluptatum.
+      </p>
+      <div className="w-full h-fit flex items-center gap-5">
+        <img
+          src="img_url"
+          alt="avatar"
+          className="w-12 aspect-square rounded-full object-cover object-center"
+        />
+        <div className="w-full h-fit flex flex-col">
+          <p className="text-ellipsis line-clamp-1 text-neutral-600">
+            Lorem, ipsum.
+          </p>
+          <p className="text-xl text-ellipsis line-clamp-1">
+            Lorem, ipsum dolor.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <QuoteFirstTestimonial />,
+  },
+  {
+    id: "author-first-testimonial",
+    name: "Author First Testimonial",
+    description:
+      "Testimonial card showing author details first, then the quote. Great for credibility.",
+    category: "Testimonials",
+    githubLink: "https://google.com",
+    tags: ["testimonial", "card", "review"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function AuthorFirstTestimonial() {
+          return (
+            <div className="w-full h-fit flex flex-col gap-6 p-6 pb-7 rounded-3xl bg-[#f0f0f0] dark:bg-[#202020]">
+              <div className="w-full h-fit flex items-center gap-5">
+                <img
+                  src="img_url"
+                  alt="avatar"
+                  className="w-12 aspect-square rounded-full object-cover object-center"
+                />
+                <div className="w-full h-fit flex flex-col">
+                  <p className="text-ellipsis line-clamp-1 text-neutral-600">
+                    Lorem, ipsum.
+                  </p>
+                  <p className="text-xl text-ellipsis line-clamp-1">
+                    Lorem, ipsum dolor.
+                  </p>
+                </div>
+              </div>
+              <p className="px-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sint
+                tenetur quibusdam modi ipsum maiores dicta deserunt fugit excepturi
+                voluptatum. Lorem, ipsum.
+              </p>
+            </div>
+          );
+        }`,
+      },
+    ],
+    component: () => <AuthorFirstTestimonial />,
+  },
+  {
+    id: "centered-testimonial",
+    name: "Centered Testimonial",
+    description:
+      "Centered testimonial card with avatar at top, quote in middle, and author at bottom.",
+    category: "Testimonials",
+    githubLink: "https://google.com",
+    tags: ["testimonial", "centered", "card", "review"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function CenteredTestimonial() {
+          return (
+            <div className="w-full h-fit flex flex-col items-center gap-6 p-6 pt-8 rounded-3xl bg-[#f0f0f0] dark:bg-[#202020]">
+              <img
+                src="img_url"
+                alt="avatar"
+                className="w-16 aspect-square rounded-full object-cover object-center"
+              />
+              <p className="px-3 text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui
+                pariatur sint similique cupiditate est quaerat odio harum aliquam hic?
+              </p>
+              <div className="w-full h-fit flex flex-col">
+                <p className="text-ellipsis line-clamp-1 text-center text-neutral-600">
+                  Lorem, ipsum.
+                </p>
+                <p className="text-xl text-ellipsis line-clamp-1 text-center">
+                  Lorem, ipsum dolor.
+                </p>
+              </div>
+            </div>
+          );
+        }`,
+      },
+    ],
+    component: () => <CenteredTestimonial />,
+  },
+  {
+    id: "floating-avatar-testimonial",
+    name: "Floating Avatar Testimonial",
+    description:
+      "Testimonial card with a floating avatar at top, followed by the author and quote, and the ratings at the bottom.",
+    category: "Testimonials",
+    githubLink: "https://google.com",
+    tags: ["testimonial", "centered", "card", "review", "rating"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import { FaStar } from "react-icons/fa6";
+        
+        export default function FloatingAvatarTestimonial() {
+          return (
+            <div className="w-full h-fit flex flex-col items-center gap-6 p-6 rounded-3xl relative bg-[#f0f0f0] dark:bg-[#202020]">
+              <img
+                src="img_url"
+                alt="avatar"
+                className="w-20 aspect-square rounded-full object-cover object-center absolute top-0 -translate-y-1/2 border-6 border-neutral-50 dark:border-neutral-900"
+              />
+              <div className="w-full h-fit flex flex-col pt-10">
+                <p className="text-ellipsis line-clamp-1 text-center text-neutral-600">
+                  Lorem, ipsum.
+                </p>
+                <p className="text-xl text-ellipsis line-clamp-1 text-center">
+                  Lorem, ipsum dolor.
+                </p>
+              </div>
+              <p className="px-3 text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui
+                pariatur sint similique cupiditate est quaerat odio harum aliquam hic?
+              </p>
+              <div className="w-full h-fit flex items-center justify-center text-lg gap-1 pb-1.5">
+                <FaStar className="text-orange-300 dark:text-yellow-600" />
+                <FaStar className="text-orange-300 dark:text-yellow-600" />
+                <FaStar className="text-orange-300 dark:text-yellow-600" />
+                <FaStar className="text-orange-300 dark:text-yellow-600" />
+                <FaStar className="text-neutral-300 dark:text-neutral-700" />
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "requirements",
+        language: "jsx",
+        code: `npm i react-icons`,
+      },
+    ],
+    component: () => <FloatingAvatarTestimonial />,
+  },
+  {
+    id: "featured-testimonial",
+    name: "Featured Testimonial",
+    description:
+      "Centered testimonial card which can showcase featured reviews followed by an avatar and author details.",
+    category: "Testimonials",
+    githubLink: "https://google.com",
+    tags: ["testimonial", "centered", "card", "review", "featured"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function FeaturedTestimonial() {
+  return (
+    <div className="w-full h-fit flex flex-col items-center gap-6 p-10 pb-8 rounded-3xl bg-[#f0f0f0] dark:bg-[#202020]">
+      <p className="text-3xl font-semibold text-center">
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, neque"
+      </p>
+      <img
+        src="img_url"
+        alt="avatar"
+        className="w-16 aspect-square rounded-full object-cover object-center"
+      />
+      <div className="w-full h-fit flex flex-col">
+        <p className="text-ellipsis line-clamp-1 text-center text-neutral-600">
+          Lorem, ipsum.
+        </p>
+        <p className="text-xl text-ellipsis line-clamp-1 text-center">
+          Lorem, ipsum dolor.
+        </p>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <FeaturedTestimonial />,
+  },
+  // product image galleries
+  {
+    id: "vertical-product-image-gallery",
+    name: "Vertical Product Image Gallery",
+    description:
+      "Product gallery with main image on top and thumbnails below. Includes lightbox with zoom on hover. ",
+    category: "Image Galleries",
+    githubLink: "https://google.com",
+    tags: ["gallery", "product", "lightbox"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `"use client";
+        
+        import { useState, useEffect, useRef } from "react";
+        
+        export default function VerticalProductImageGallery() {
+          const [currentItem, setCurrentItem] = useState(0);
+          const [openLightBox, setOpenLightBox] = useState(false);
+          const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
+          const [isHoveringImage, setIsHoveringImage] = useState(false);
+          const rafRef = useRef(null);
+          const targetPosition = useRef({ x: 0.5, y: 0.5 });
+        
+          useEffect(() => {
+            const animate = () => {
+              setMousePosition((prev) => ({
+                x: prev.x + (targetPosition.current.x - prev.x) * 0.1,
+                y: prev.y + (targetPosition.current.y - prev.y) * 0.1,
+              }));
+              rafRef.current = requestAnimationFrame(animate);
+            };
+        
+            if (isHoveringImage) {
+              rafRef.current = requestAnimationFrame(animate);
+            }
+        
+            return () => {
+              if (rafRef.current) {
+                cancelAnimationFrame(rafRef.current);
+              }
+            };
+          }, [isHoveringImage]);
+        
+          const images = ["img_1_url", "img_2_url", "img_3_url", "img_4_url"];
+        
+          const handleMouseMove = (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            targetPosition.current = { x, y };
+          };
+        
+          return (
+            <>
+              <div className="w-full h-fit flex flex-col gap-2">
+                <img
+                  src={images[currentItem]}
+                  onClick={() => setOpenLightBox(true)}
+                  alt="image"
+                  className="w-full aspect-square rounded-lg sm:rounded-2xl object-cover object-center cursor-pointer"
+                />
+                <div className="w-full h-fit flex gap-2">
+                  {images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      onClick={() => setCurrentItem(index)}
+                      alt="image"
+                      className="min-w-0 flex-1 aspect-square rounded-lg sm:rounded-2xl object-cover object-center cursor-pointer"
+                    />
+                  ))}
+                </div>
+              </div>
+              {openLightBox && (
+                <div
+                  onClick={() => setOpenLightBox(false)}
+                  className="w-screen h-screen fixed top-0 left-0 p-10 sm:p-20 flex items-center justify-center z-50 bg-neutral-500/10 dark:bg-neutral-950/50"
+                >
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    onMouseMove={handleMouseMove}
+                    onMouseEnter={() => setIsHoveringImage(true)}
+                    onMouseLeave={() => {
+                      setIsHoveringImage(false);
+                      setMousePosition({ x: 0.5, y: 0.5 });
+                      targetPosition.current = { x: 0.5, y: 0.5 };
+                    }}
+                    className="relative h-full flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src={images[currentItem]}
+                      alt="image"
+                      style={{
+                        transform: isHoveringImage ? \`\scale(2)\` : "scale(1)",
+                        transformOrigin: \`\${mousePosition.x * 100}% \${
+                          mousePosition.y * 100
+                        }%\`,
+                        transition: isHoveringImage
+                          ? "transform 0.3s cubic-bezier(0.33, 1, 0.68, 1)"
+                          : "transform 0.3s cubic-bezier(0.33, 1, 0.68, 1)",
+                      }}
+                      className="w-full h-full object-contain object-center"
+                    />
+                  </div>
+                </div>
+              )}
+            </>
+          );
+        }`,
+      },
+    ],
+    component: () => <VerticalProductImageGallery />,
+  },
+  {
+    id: "horizontal-product-image-gallery",
+    name: "Horizontal Product Image Gallery",
+    description:
+      "Product gallery with main image on left and vertical thumbnails on right. Features a lightbox with zoom on hover effect.",
+    category: "Image Galleries",
+    githubLink: "https://google.com",
+    tags: ["gallery", "product", "lightbox"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `"use client";
+        
+        import { useEffect, useRef, useState } from "react";
+        
+        export default function HorizontalProductImageGallery() {
+          const [currentItem, setCurrentItem] = useState(0);
+          const [openLightBox, setOpenLightBox] = useState(false);
+          const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
+          const [isHoveringImage, setIsHoveringImage] = useState(false);
+          const rafRef = useRef(null);
+          const targetPosition = useRef({ x: 0.5, y: 0.5 });
+        
+          useEffect(() => {
+            const animate = () => {
+              setMousePosition((prev) => ({
+                x: prev.x + (targetPosition.current.x - prev.x) * 0.1,
+                y: prev.y + (targetPosition.current.y - prev.y) * 0.1,
+              }));
+              rafRef.current = requestAnimationFrame(animate);
+            };
+        
+            if (isHoveringImage) {
+              rafRef.current = requestAnimationFrame(animate);
+            }
+        
+            return () => {
+              if (rafRef.current) {
+                cancelAnimationFrame(rafRef.current);
+              }
+            };
+          }, [isHoveringImage]);
+        
+          const images = [
+            "assets/images/image-1-dark.svg",
+            "assets/images/image-2-dark.svg",
+            "assets/images/image-3-dark.svg",
+            "assets/images/image-4-dark.svg",
+          ];
+        
+          const handleMouseMove = (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            targetPosition.current = { x, y };
+          };
+        
+          return (
+            <>
+              <div className="w-full h-fit grid grid-cols-10 gap-2">
+                <img
+                  src={images[currentItem]}
+                  onClick={() => setOpenLightBox(true)}
+                  alt="image"
+                  className="w-full col-span-8 aspect-square rounded-lg sm:rounded-2xl object-cover object-center cursor-pointer"
+                />
+                <div className="w-full col-span-2 flex flex-col gap-2">
+                  {images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      onClick={() => setCurrentItem(index)}
+                      alt="image"
+                      className="min-w-0 flex-1 aspect-square rounded-lg sm:rounded-2xl object-cover object-center cursor-pointer"
+                    />
+                  ))}
+                </div>
+              </div>
+              {openLightBox && (
+                <div
+                  onClick={() => setOpenLightBox(false)}
+                  className="w-screen h-screen fixed top-0 left-0 p-10 sm:p-20 flex items-center justify-center z-50 bg-neutral-500/10 dark:bg-neutral-950/50"
+                >
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    onMouseMove={handleMouseMove}
+                    onMouseEnter={() => setIsHoveringImage(true)}
+                    onMouseLeave={() => {
+                      setIsHoveringImage(false);
+                      setMousePosition({ x: 0.5, y: 0.5 });
+                      targetPosition.current = { x: 0.5, y: 0.5 };
+                    }}
+                    className="relative h-full flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src={images[currentItem]}
+                      alt="image"
+                      style={{
+                        transform: isHoveringImage ? \`\scale(2)\` : "scale(1)",
+                        transformOrigin: \`\${mousePosition.x * 100}% \${
+                          mousePosition.y * 100
+                        }%\`,
+                        transition: isHoveringImage
+                          ? "transform 0.3s cubic-bezier(0.33, 1, 0.68, 1)"
+                          : "transform 0.3s cubic-bezier(0.33, 1, 0.68, 1)",
+                      }}
+                      className="w-full h-full object-contain object-center"
+                    />
+                  </div>
+                </div>
+              )}
+            </>
+          );
+        }`,
+      },
+    ],
+    component: () => <HorizontalProductImageGallery />,
+  },
+  // auth
+  {
+    id: "login-form",
+    name: "Login Form",
+    description:
+      "Complete login form with email, password toggle, Google sign-in, and forgot password link.",
+    category: "Auth",
+    githubLink: "https://google.com",
+    tags: ["form", "login", "auth"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `import Link from "next/link";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
+
+export default function LoginForm() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <div className="w-full max-w-sm h-fit flex flex-col items-center gap-8">
+      <div className="w-full h-fit flex flex-col pb-4">
+        <p className="text-center text-neutral-400">Welcome Back</p>
+        <h3 className="text-2xl font-semibold text-center">
+          Sign in to your Account
+        </h3>
+      </div>
+      <div className="w-full h-fit flex flex-col gap-5">
+        <div className="w-full h-fit flex flex-col gap-2">
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            spellCheck="false"
+            placeholder="Enter your Email..."
+            className="w-full h-12 px-6 rounded-full bg-neutral-200/50 dark:bg-neutral-800/60"
+          />
+        </div>
+        <div className="w-full h-fit flex flex-col gap-2">
+          <label htmlFor="email">Password</label>
+          <div className="w-full h-12 pe-1.5 rounded-full flex items-center bg-neutral-200/50 dark:bg-neutral-800/60">
+            <input
+              id="password"
+              type={showPassword ? "text" : "password"}
+              spellCheck="false"
+              placeholder="Enter your Password..."
+              className="w-full px-6"
+            />
+            <button
+              onClick={() => setShowPassword(!showPassword)}
+              className="w-9 flex items-center justify-center shrink-0 aspect-square rounded-full cursor-pointer text-lg text-neutral-500 bg-neutral-200 dark:bg-neutral-800"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
+          <button className="w-full h-fit flex items-center justify-end cursor-pointer text-neutral-500">
+            Forgot Password?
+          </button>
+        </div>
+      </div>
+      <div className="w-full h-fit flex flex-col gap-3">
+        <button className="w-full h-fit px-6 py-3 rounded-full cursor-pointer bg-neutral-200 dark:bg-neutral-800">
+          Login
+        </button>
+        <div className="w-full h-fit flex items-center gap-3">
+          <div className="w-full h-0.5 bg-neutral-200/50 dark:bg-neutral-800/60"></div>
+          <span className="w-fit h-fit flex text-neutral-400 dark:text-neutral-600">
+            OR
+          </span>
+          <div className="w-full h-0.5 bg-neutral-200/50 dark:bg-neutral-800/60"></div>
+        </div>
+        <button className="w-full h-fit px-6 py-3 rounded-full cursor-pointer bg-neutral-200 dark:bg-neutral-800">
+          Continue with Google
+        </button>
+      </div>
+      <p className="w-full text-center">
+        <span className="text-neutral-500">Don't have an Account?</span>{" "}
+        <Link
+          href={"#"}
+          className="w-full text-center underline underline-offset-2"
+        >
+          Sign Up here
+        </Link>
+      </p>
+    </div>
+  );
+}`,
+      },
+      {
+        name: "requirements",
+        language: "jsx",
+        code: `npm i react-icons`,
+      },
+    ],
+    component: () => <LoginForm />,
   },
 ];
 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="600"
+   viewBox="0 0 132.29166 158.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="image-2-dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.68150253"
+     inkscape:cx="-90.975452"
+     inkscape:cy="295.67022"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern3"
+       preserveAspectRatio="xMidYMid"
+       id="pattern4"
+       patternTransform="matrix(0.39847788,0.0348623,-0.0348623,0.39847788,-337.99997,657.99999)"
+       x="0"
+       y="0" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="69.999987"
+       height="70.000021"
+       patternTransform="translate(-276.99999,342)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern2"
+       inkscape:label="pattern2">
+      <path
+         d="m 50.000013,49.999971 c 0,-5.522986 4.477001,-9.999987 9.999987,-9.999987 5.522986,0 9.999987,4.477001 9.999987,9.999987 0,5.523024 -4.477001,10.000025 -9.999987,10.000025 0,5.523024 -4.477002,10.000025 -9.999987,10.000025 -5.523024,0 -10.000026,-4.477001 -10.000026,-10.000025 0,-5.523023 4.477002,-10.000025 10.000026,-10.000025 z M 9.9999874,9.9999874 C 9.9999874,4.4770016 14.476989,0 20.000013,0 25.522998,0 30,4.4770016 30,9.9999874 30,15.522973 25.522998,19.999975 20.000013,19.999975 20.000013,25.522998 15.523011,30 9.9999874,30 4.4770016,30 0,25.522998 0,19.999975 0,14.476989 4.4770016,9.9999874 9.9999874,9.9999874 Z M 20.000013,18 c 4.418003,0 7.999974,-3.582009 7.999974,-8.0000126 0,-4.4180031 -3.581971,-8.0000126 -7.999974,-8.0000126 C 15.582009,1.9999748 12,5.5819843 12,9.9999874 12,14.417991 15.582009,18 20.000013,18 Z M 60,57.999984 c 4.418003,0 8.000013,-3.58201 8.000013,-8.000013 0,-4.418003 -3.58201,-7.999975 -8.000013,-7.999975 -4.418003,0 -8.000013,3.581972 -8.000013,7.999975 0,4.418003 3.58201,8.000013 8.000013,8.000013 z"
+         id="path8"
+         style="fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999" />
+    </pattern>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="70.000003"
+       height="70.000025"
+       patternTransform="translate(-337.99997,657.99999)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern3"
+       inkscape:label="pattern3">
+      <path
+         d="m 50.000001,50.000013 c 0,-5.522986 4.477002,-9.999988 9.999999,-9.999988 5.523001,0 10.000003,4.477002 10.000003,9.999988 C 70.000003,55.523036 65.523001,60 60,60 60,65.523024 55.523002,70.000025 50.000001,70.000025 44.477,70.000025 40.000003,65.523024 40.000003,60 c 0,-5.522986 4.476997,-9.999987 9.999998,-9.999987 z M 9.9999987,10.000025 C 9.9999987,4.4770016 14.477,0 19.999997,0 25.522998,0 30,4.4770016 30,10.000025 30,15.523011 25.522998,20.000013 19.999997,20.000013 19.999997,25.522998 15.523,30 9.9999987,30 4.4769978,30 0,25.522998 0,20.000013 0,14.477027 4.4769978,10.000025 9.9999987,10.000025 Z M 19.999997,18 c 4.418004,0 8.000002,-3.581972 8.000002,-7.999975 0,-4.418003 -3.581998,-8.0000124 -8.000002,-8.0000124 C 15.581998,2.0000126 12,5.582022 12,10.000025 12,14.418028 15.581998,18 19.999997,18 Z M 60,58.000025 c 4.418003,0 8.000001,-3.582009 8.000001,-8.000012 C 68.000001,45.582009 64.418003,42 60,42 c -4.417999,0 -7.999997,3.582009 -7.999997,8.000013 0,4.418003 3.581998,8.000012 7.999997,8.000012 z"
+         id="path1-4"
+         style="fill:#171717;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999" />
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1e1e1e;stroke-width:0.264999;fill-opacity:1"
+       id="rect1"
+       width="132.29167"
+       height="158.75"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:url(#pattern4);stroke-width:0.264999;fill-opacity:1"
+       id="rect2"
+       width="132.29167"
+       height="158.75"
+       x="0"
+       y="0" />
+    <rect
+       style="stroke:none;fill:url(#pattern3)"
+       transform="scale(0.26458333)"
+       width="70.000003"
+       height="70.000025"
+       x="-337.99997"
+       y="657.99999"
+       id="rect3" />
+  </g>
+</svg>
