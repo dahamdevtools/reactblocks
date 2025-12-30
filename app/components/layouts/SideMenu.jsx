@@ -1,5 +1,6 @@
 import { getCategoryCount } from "@/data/component-data";
 import ThemeSwitcher from "@/lib/utils/ThemeSwitcher";
+import Link from "next/link";
 
 export default function SideMenu({
   categories,
@@ -10,14 +11,17 @@ export default function SideMenu({
     <div className="w-fit h-full hidden lg:flex flex-col justify-between rounded-2xl bg-neutral-50 dark:bg-neutral-900">
       <div className="w-fit h-full flex flex-col">
         <div className="px-10 py-8 h-fit w-full">
-          <div className="w-fit h-fit flex items-center gap-2">
+          <Link
+            href={"/"}
+            className="w-fit h-fit flex items-center gap-2 cursor-pointer"
+          >
             <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
               React
             </h1>
             <span className="text-lg font-semibold px-3 py-1 flex bg-neutral-200 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-xl">
               blocks
             </span>
-          </div>
+          </Link>
         </div>
         <div className="w-full h-fit px-3.5">
           <div className="w-full h-fit border-b border-neutral-200 dark:border-neutral-800"></div>

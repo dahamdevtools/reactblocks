@@ -21,10 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen flex flex-col items-center bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen p-0 m-0 flex flex-col items-center bg-white`}
       >
         <Providers>
-          <div className="w-full h-screen flex flex-col items-center overflow-hidden p-0 lg:p-3.5 bg-neutral-200/50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200">
+          <div className="w-full h-full bg-neutral-200/50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200">
             {children}
           </div>
         </Providers>
