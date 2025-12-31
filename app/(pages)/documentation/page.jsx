@@ -14,7 +14,7 @@ export default function Documentation() {
       className="w-screen h-screen flex flex-col items-center overflow-x-hidden overflow-y-auto scrollbar-none"
     >
       <Navigation position={"sticky"} scrollContainerRef={scrollContainerRef} />
-      <div className="w-full max-w-[1440px] flex-1 flex flex-col items-center">
+      <div className="w-full max-w-[1440px] flex-1 flex flex-col items-center justify-between">
         <div className="w-full flex flex-col items-center">
           <main className="w-full max-w-3xl h-fit flex flex-col gap-2 py-20 mb-8 px-5 sm:px-10">
             <h1 className="text-center font-extrabold text-3xl sm:text-6xl">

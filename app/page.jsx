@@ -15,6 +15,7 @@ import {
 } from "react-icons/io5";
 import { useRef } from "react";
 import Link from "next/link";
+import LandingPageFaq from "./components/main/LandingPageFaq";
 
 export default function Home() {
   const { ref, inView } = useInView({ triggerOnce: false });
@@ -231,6 +232,26 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="w-full h-fit flex flex-col items-center gap-8">
+          <div className="w-full max-w-2xl h-fit flex flex-col gap-2 px-8">
+            <h3 className="text-3xl sm:text-5xl font-bold text-center">
+              Frequently Asked Questions
+            </h3>
+            <p className="text-lg sm:text-2xl text-center text-neutral-500">
+              A few quick answers before you start building. For more details,
+              check out the{" "}
+              <Link
+                href={"/faq"}
+                className="underline underline-offset-2 text-neutral-900 dark:text-neutral-300"
+              >
+                full FAQ page.
+              </Link>
+            </p>
+          </div>
+          <div className="w-full max-w-2xl h-fit px-5">
+            <LandingPageFaq />
           </div>
         </section>
         <section className="w-full h-fit flex flex-col items-center gap-5 px-8 pt-10 sm:pt-13 pb-8 rounded-3xl bg-neutral-50 dark:bg-neutral-900">
