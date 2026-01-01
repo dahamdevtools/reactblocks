@@ -26,7 +26,7 @@ export default function Documentation() {
               faster.
             </h4>
           </main>
-          <div className="w-full max-w-3xl h-fit flex flex-col gap-8 px-5 mb-20">
+          <div className="w-full max-w-3xl h-fit flex flex-col gap-8 px-8 mb-20">
             <div className="flex flex-col gap-2">
               <h3 className="font-semibold text-2xl sm:text-3xl">
                 Installation
