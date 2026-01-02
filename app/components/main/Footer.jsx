@@ -46,7 +46,7 @@ export default function Footer() {
             <Link href={"https://github.com/dahamdevtools/reactblocks"}>
               GitHub
             </Link>
-            <Link href={"https://x.com/daahaamm"}>Twitter</Link>
+            <Link href={"https://x.com/daahaamm"}>X</Link>
           </div>
         </div>
       </nav>
