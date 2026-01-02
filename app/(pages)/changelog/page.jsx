@@ -109,13 +109,13 @@ export default function ChangeLog() {
               </p>
               <div className="w-full flex flex-wrap items-center justify-center gap-3.5">
                 <Link
-                  href={"#"}
+                  href={"https://github.com/dahamdevtools/reactblocks"}
                   className="w-fit h-fit px-8 py-3.5 rounded-2xl cursor-pointer bg-neutral-300 dark:bg-neutral-800"
                 >
                   Follow on GitHub
                 </Link>
                 <Link
-                  href={"#"}
+                  href={"https://x.com/daahaamm"}
                   className="w-fit h-fit px-8 py-3.5 rounded-2xl cursor-pointer bg-neutral-300/50 dark:bg-neutral-800/50"
                 >
                   Follow on X

@@ -28,23 +28,115 @@ export default function About() {
             </h4>
           </main>
           <div className="w-full max-w-3xl h-fit flex flex-col gap-8 px-8 mb-20">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-8">
               <h3 className="font-semibold text-2xl sm:text-3xl">
-                How It Started
+                How It Started,
               </h3>
-              <p className="text-lg sm:text-xl text-neutral-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur, fugit unde suscipit tempora voluptatum nam in eos
-                commodi rem nesciunt voluptates animi itaque aliquam fuga
-                officiis, amet magni dolor ullam!
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                Hi! I'm{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  Daham Senarathne
+                </strong>
+                , a developer and student from Sri Lanka. I started building
+                software in{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  2023
+                </strong>
+                , and by{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  2025
+                </strong>
+                , I switched my tech stack to{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  React
+                </strong>
+                . Since then, I've worked with frameworks like{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  Vite
+                </strong>{" "}
+                and{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  Next.js
+                </strong>{" "}
+                and I completely fell in love with{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  Next.js
+                </strong>
+                .
               </p>
-              <p className="text-lg sm:text-xl text-neutral-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                minus temporibus explicabo minima dicta exercitationem
-                distinctio quibusdam cupiditate a praesentium beatae rem
-                architecto quod culpa at atque, iure incidunt voluptatem enim,
-                assumenda ratione nemo quaerat. Quod ipsa reprehenderit
-                excepturi maiores?
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                I began building projects just for fun, but over time, I started
+                developing SaaS applications, some of which are still in
+                progress. Throughout this journey, I've tried countless CSS
+                frameworks, component libraries, and animation tools because I
+                really enjoy{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  frontend development
+                </strong>
+                .
+              </p>
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                But there was one thing I kept noticing in my workflow:{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  repetition
+                </strong>
+                .
+              </p>
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                Every time I started a new project, I'd find myself searching
+                for components I had already built before. I'd dig through old
+                files, copy snippets, and rewrite code again and again. I used
+                libraries like{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  shadcn/ui
+                </strong>{" "}
+                and{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  Radix UI
+                </strong>
+                , which were awesome and saved time but I always ended up
+                tweaking them to fit my own minimal style.
+              </p>
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                So, I decided to collect the components I found myself reusing
+                and built a small app where I could search and copy them
+                instantly. That little project saved me a lot of time and I'm so
+                glad I built it. Eventually, I thought,{" "}
+                <strong className="italic text-neutral-800 dark:text-neutral-300">
+                  "why not share this with others too?"
+                </strong>
+              </p>
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                That's how{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  ReactBlocks
+                </strong>{" "}
+                was born. These are the components{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  I've built, still use, and will continue to use
+                </strong>{" "}
+                in my projects. They reflect my own design style,{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  clean
+                </strong>
+                ,{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  simple
+                </strong>
+                , and{" "}
+                <strong className="text-neutral-800 dark:text-neutral-300">
+                  minimal
+                </strong>{" "}
+                but feel free to tweak them however you like.
+              </p>
+              <p className="text-lg sm:text-xl text-justify text-neutral-500">
+                Thanks a lot for checking out ReactBlocks. If you find it
+                helpful, have suggestions, or just want to say hi,{" "}
+                <Link href={"/contact"}>
+                  <strong className="underline underline-offset-2 text-neutral-800 dark:text-neutral-300">
+                    I'd love to hear from you!
+                  </strong>
+                </Link>
               </p>
             </div>
             <h3 className="font-semibold text-2xl sm:text-3xl">Our Mission</h3>

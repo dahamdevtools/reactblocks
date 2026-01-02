@@ -61,9 +61,12 @@ export default function Navigation({ position, scrollContainerRef }) {
             <Link href={"/about"}>About</Link>
             <Link href={"/contact"}>Contact</Link>
           </div>
-          <button className="w-fit h-fit hidden lg:block px-6 py-3 rounded-full bg-neutral-200 dark:bg-neutral-800">
+          <Link
+            href={"https://github.com/dahamdevtools/reactblocks"}
+            className="w-fit h-fit hidden lg:block px-6 py-3 rounded-full bg-neutral-200 dark:bg-neutral-800"
+          >
             Star on Github
-          </button>
+          </Link>
           <button
             onClick={() => setOpenSlider(true)}
             className="block lg:hidden text-neutral-500 pe-2"

@@ -45,7 +45,7 @@ export default function CustomSelect({
           className={
             selected
               ? "text-neutral-900 dark:text-neutral-50"
-              : "text-neutral-50/50"
+              : "text-neutral-900/50 dark:text-neutral-50/50"
           }
         >
           {selected ? selected.label : placeholder}

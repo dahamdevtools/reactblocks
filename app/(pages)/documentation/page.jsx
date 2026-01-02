@@ -247,7 +247,7 @@ export default function Documentation() {
               <li className="ps-3.5 border-s-4 border-neutral-300 dark:border-neutral-800">
                 Open an issue on{" "}
                 <Link
-                  href={"#"}
+                  href={"https://github.com/dahamdevtools/reactblocks"}
                   className="underline underline-offset-2 text-neutral-900 dark:text-neutral-300"
                 >
                   GitHub

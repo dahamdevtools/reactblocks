@@ -39,9 +39,12 @@ export default function Header({
               <LuSearch className="text-2xl text-neutral-500" />
               <SearchBar value={value} onChange={onChange} />
             </div>
-            <button className="hidden lg:block text-nowrap bg-neutral-200 dark:bg-neutral-800 px-5 py-3 rounded-lg">
+            <Link
+              href={"https://github.com/dahamdevtools/reactblocks"}
+              className="hidden lg:block text-nowrap bg-neutral-200 dark:bg-neutral-800 px-5 py-3 rounded-lg"
+            >
               Star on Github
-            </button>
+            </Link>
           </div>
         </div>
         <div className="block lg:hidden">

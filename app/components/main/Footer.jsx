@@ -43,8 +43,10 @@ export default function Footer() {
         <div className="w-full flex flex-col gap-8">
           <h4 className="text-2xl font-bold">Connect</h4>
           <div className="w-full flex flex-col gap-2 text-neutral-400">
-            <Link href={"#"}>GitHub</Link>
-            <Link href={"#"}>Twitter</Link>
+            <Link href={"https://github.com/dahamdevtools/reactblocks"}>
+              GitHub
+            </Link>
+            <Link href={"https://x.com/daahaamm"}>Twitter</Link>
           </div>
         </div>
       </nav>

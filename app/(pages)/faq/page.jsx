@@ -64,7 +64,7 @@ export default function FAQ() {
       id: "item-9",
       trigger: "How often are new components added?",
       content:
-        "New components and updates are added regularly. Follow ReactBlocks on GitHub or X (Twitter) to stay updated with the latest releases.",
+        "New components and updates are added regularly. Follow ReactBlocks on GitHub or X to stay updated with the latest releases.",
     },
     {
       id: "item-10",

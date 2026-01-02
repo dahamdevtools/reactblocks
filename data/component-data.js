@@ -53,7 +53,8 @@ export const componentsData = [
     description:
       "A circular avatar image with clean rounded corners. Simple and versatile for user profiles.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/BasicAvatar.jsx",
     tags: ["avatar", "profile", "image"],
     columns: 3,
     files: [
@@ -79,7 +80,8 @@ export const componentsData = [
     description:
       "A rounded square avatar with softer corners. Modern alternative to circular avatars.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/SquareAvatar.jsx",
     tags: ["avatar", "square", "profile"],
     columns: 3,
     files: [
@@ -105,7 +107,8 @@ export const componentsData = [
     description:
       "Multiple overlapping avatars displayed in a row. Perfect for showing team members or participants.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/AvatarGroup.jsx",
     tags: ["avatar", "group", "team"],
     columns: 3,
     files: [
@@ -148,7 +151,8 @@ export const componentsData = [
     description:
       "Overlapping avatars with a counter badge showing additional members. Ideal for large groups.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/AvatarGroupWithCount.jsx",
     tags: ["avatar", "group", "team", "count"],
     columns: 3,
     files: [
@@ -189,7 +193,8 @@ export const componentsData = [
     description:
       "Avatar with a green status indicator showing the user is online or active.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/ActiveAvatar.jsx",
     tags: ["avatar", "status", "online"],
     columns: 3,
     files: [
@@ -218,7 +223,8 @@ export const componentsData = [
     description:
       "Avatar with an orange status indicator showing the user is away or pending.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/PendingAvatar.jsx",
     tags: ["avatar", "status", "away", "pending"],
     columns: 3,
     files: [
@@ -247,7 +253,8 @@ export const componentsData = [
     description:
       "Avatar with a red status indicator showing the user is busy or do not disturb.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/BusyAvatar.jsx",
     tags: ["avatar", "status", "busy"],
     columns: 3,
     files: [
@@ -276,7 +283,8 @@ export const componentsData = [
     description:
       "Avatar with a gray status indicator showing the user is offline or inactive.",
     category: "Avatars",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/avatars/InactiveAvatar.jsx",
     tags: ["avatar", "status", "offline", "inactive"],
     columns: 3,
     files: [
@@ -306,7 +314,8 @@ export const componentsData = [
     description:
       "Accordion with floating card style items and smooth animations. Clean shadows and hover effects.",
     category: "Accordions",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/accordions/FloatingCardAccordion.jsx",
     tags: ["accordion", "card", "animated"],
     columns: 2,
     files: [
@@ -474,7 +483,8 @@ export const componentsData = [
     description:
       "Accordion with items grouped in a container background. Compact design with subtle spacing.",
     category: "Accordions",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/accordions/ContainedAccordion.jsx",
     tags: ["accordion", "contained", "grouped"],
     columns: 2,
     files: [
@@ -642,7 +652,8 @@ export const componentsData = [
     description:
       "Clean accordion with simple border dividers. No backgrounds, just clean lines and spacing.",
     category: "Accordions",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/accordions/MinimalAccordion.jsx",
     tags: ["accordion", "minimal", "simple"],
     columns: 2,
     files: [
@@ -810,7 +821,8 @@ export const componentsData = [
     description:
       "Accordion with a full border container and divided items. Structured and organized appearance.",
     category: "Accordions",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/accordions/BorderedAccordion.jsx",
     tags: ["accordion", "bordered", "structured", "sharp"],
     columns: 2,
     files: [
@@ -979,7 +991,8 @@ export const componentsData = [
     description:
       "A badge with a green status indicator dot. Shows active or online status.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/ActiveBadge.jsx",
     tags: ["badge", "status", "indicator", "online"],
     columns: 3,
     files: [
@@ -1004,7 +1017,8 @@ export const componentsData = [
     description:
       "A badge with an orange status indicator dot. Shows pending or away status.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/PendingBadge.jsx",
     tags: ["badge", "status", "indicator", "away"],
     columns: 3,
     files: [
@@ -1029,7 +1043,8 @@ export const componentsData = [
     description:
       "A badge with a red status indicator dot. Shows busy or do not disturb status.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/BusyBadge.jsx",
     tags: ["badge", "status", "indicator"],
     columns: 3,
     files: [
@@ -1054,7 +1069,8 @@ export const componentsData = [
     description:
       "A badge with a gray status indicator dot. Shows offline or inactive status.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/InactiveBadge.jsx",
     tags: ["badge", "status", "indicator", "offline"],
     columns: 3,
     files: [
@@ -1079,7 +1095,8 @@ export const componentsData = [
     description:
       "A badge with animated ping effect showing active or online status. Eye-catching indicator.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/ActiveBadgePing.jsx",
     tags: ["badge", "status", "indicator", "online", "animated"],
     columns: 3,
     files: [
@@ -1107,7 +1124,8 @@ export const componentsData = [
     description:
       "A badge with animated ping effect showing pending or away status. Smooth pulsing animation.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/PendingBadgePing.jsx",
     tags: ["badge", "status", "indicator", "away", "animated"],
     columns: 3,
     files: [
@@ -1135,7 +1153,8 @@ export const componentsData = [
     description:
       "A badge with a green status indicator dot. Shows active or online status.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/BusyBadgePing.jsx",
     tags: ["badge", "status", "indicator", "animated"],
     columns: 3,
     files: [
@@ -1163,7 +1182,8 @@ export const componentsData = [
     description:
       "A badge with a green status indicator dot. Shows active or online status.",
     category: "Badges",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/badges/InactiveBadgePing.jsx",
     tags: ["badge", "status", "indicator", "offline", "animated"],
     columns: 3,
     files: [
@@ -1192,7 +1212,8 @@ export const componentsData = [
     description:
       "A minimalist range slider with a dual-ring thumb and solid color track for clear visual feedback.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/SingleToneSlider.jsx",
     tags: ["slider", "input", "range", "basic"],
     columns: 3,
     files: [
@@ -1230,7 +1251,8 @@ export const componentsData = [
     description:
       "A contemporary slider with a square thumb instead of the traditional circle. Ideal for modern, geometric designs.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/SquareThumbSlider.jsx",
     tags: ["slider", "input", "range", "square"],
     columns: 3,
     files: [
@@ -1268,7 +1290,8 @@ export const componentsData = [
     description:
       "Select minimum and maximum values with independent handles. Features gap constraint to prevent overlap.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/DualHandleRangeSlider.jsx",
     tags: ["slider", "input", "range", "min", "max", "handle"],
     columns: 3,
     files: [
@@ -1389,7 +1412,8 @@ export const componentsData = [
     description:
       "A slider with gradient-filled track that visualizes progress. Features dual-ring thumb and smooth color transition.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/DualToneSlider.jsx",
     tags: ["slider", "input", "range", "gradient", "progress"],
     columns: 3,
     files: [
@@ -1435,7 +1459,8 @@ export const componentsData = [
     description:
       "Gradient-filled slider with visible min, max, and current value labels. Perfect for precise value selection.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/LabeledRangeSlider.jsx",
     tags: ["slider", "input", "range", "labeled", "values"],
     columns: 3,
     files: [
@@ -1498,7 +1523,8 @@ export const componentsData = [
     description:
       "An interactive slider with a floating badge that displays the current value above the thumb in real-time.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/ValueDisplaySlider.jsx",
     tags: ["slider", "input", "range", "tooltip"],
     columns: 3,
     files: [
@@ -1544,7 +1570,8 @@ export const componentsData = [
     description:
       "Dual-handle range slider with floating badges showing min and max values in real-time. Includes gap constraint.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/DualHandleTooltipSlider.jsx",
     tags: ["slider", "input", "range", "tooltip", "dual"],
     columns: 3,
     files: [
@@ -1673,7 +1700,8 @@ export const componentsData = [
     description:
       "A stepped slider with visual dot indicators that light up as you progress. Perfect for ratings or level selection.",
     category: "Sliders",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/sliders/SteppedDotSlider.jsx",
     tags: ["slider", "input", "range", "steps", "discrete"],
     columns: 3,
     files: [
@@ -1737,7 +1765,8 @@ export const componentsData = [
     description:
       "A standard toggle switch with a circular thumb that slides between on/off states. Clean and minimal design.",
     category: "Toggle Switches",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/toggleSwitches/BasicToggleSwitch.jsx",
     tags: ["toggle", "switch", "checkbox"],
     columns: 3,
     files: [
@@ -1810,7 +1839,8 @@ export const componentsData = [
     description:
       "A toggle switch with a square thumb instead of the traditional circle. Perfect for modern, geometric designs.",
     category: "Toggle Switches",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/toggleSwitches/SquareToggleSwitch.jsx",
     tags: ["toggle", "switch", "checkbox", "square"],
     columns: 3,
     files: [
@@ -1884,7 +1914,8 @@ export const componentsData = [
     description:
       "A simple browser window mockup with macOS-style title bar buttons. Perfect for showcasing web content.",
     category: "Mockups",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/mockups/BrowserMockup.jsx",
     tags: ["mockup", "browser", "window"],
     columns: 2,
     files: [
@@ -1917,7 +1948,8 @@ export const componentsData = [
     description:
       "A browser mockup with a centered URL bar and title bar buttons. Clean design for web previews.",
     category: "Mockups",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/mockups/BrowserMockupWithUrl.jsx",
     tags: ["mockup", "browser", "url"],
     columns: 2,
     files: [
@@ -1956,7 +1988,8 @@ export const componentsData = [
     description:
       "A browser mockup featuring a realistic tab design with rounded edges and URL display. Great for multi-tab presentations.",
     category: "Mockups",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/mockups/BrowserMockupWithTabs.jsx",
     tags: ["mockup", "browser", "tab", "url"],
     columns: 2,
     files: [
@@ -2007,7 +2040,8 @@ export const componentsData = [
     description:
       "A centered call-to-action component featuring a headline, descriptive text, a primary action button, and feature highlights separated by a divider.",
     category: "Layouts",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/layouts/CallToActionBanner.jsx",
     tags: ["cta", "banner", "marketing"],
     columns: 1,
     files: [
@@ -2049,7 +2083,8 @@ export const componentsData = [
     description:
       "Testimonial card with quote displayed first, followed by author info. Clean horizontal layout.",
     category: "Testimonials",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/testimonials/QuoteFirstTestimonial.jsx",
     tags: ["testimonial", "card", "review"],
     columns: 3,
     files: [
@@ -2092,7 +2127,8 @@ export const componentsData = [
     description:
       "Testimonial card showing author details first, then the quote. Great for credibility.",
     category: "Testimonials",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/testimonials/AuthorFirstTestimonial.jsx",
     tags: ["testimonial", "card", "review"],
     columns: 3,
     files: [
@@ -2135,7 +2171,8 @@ export const componentsData = [
     description:
       "Centered testimonial card with avatar at top, quote in middle, and author at bottom.",
     category: "Testimonials",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/testimonials/CenteredTestimonial.jsx",
     tags: ["testimonial", "centered", "card", "review"],
     columns: 3,
     files: [
@@ -2175,7 +2212,8 @@ export const componentsData = [
     description:
       "Testimonial card with a floating avatar at top, followed by the author and quote, and the ratings at the bottom.",
     category: "Testimonials",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/testimonials/FloatingAvatarTestimonial.jsx",
     tags: ["testimonial", "centered", "card", "review", "rating"],
     columns: 3,
     files: [
@@ -2229,7 +2267,8 @@ export const componentsData = [
     description:
       "Centered testimonial card which can showcase featured reviews followed by an avatar and author details.",
     category: "Testimonials",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/testimonials/FeaturedTestimonial.jsx",
     tags: ["testimonial", "centered", "card", "review", "featured"],
     columns: 2,
     files: [
@@ -2269,7 +2308,8 @@ export const componentsData = [
     description:
       "Product gallery with main image on top and thumbnails below. Includes lightbox with zoom on hover. ",
     category: "Image Galleries",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/imageGalleries/VerticalProductImageGallery.jsx",
     tags: ["gallery", "product", "lightbox"],
     columns: 2,
     files: [
@@ -2384,7 +2424,8 @@ export const componentsData = [
     description:
       "Product gallery with main image on left and vertical thumbnails on right. Features a lightbox with zoom on hover effect.",
     category: "Image Galleries",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/imageGalleries/HorizontalProductImageGallery.jsx",
     tags: ["gallery", "product", "lightbox"],
     columns: 2,
     files: [
@@ -2505,7 +2546,8 @@ export const componentsData = [
     description:
       "Complete login form with email, password toggle, Google sign-in, and forgot password link.",
     category: "Auth",
-    githubLink: "https://google.com",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/auth/LoginForm.jsx",
     tags: ["form", "login", "auth"],
     columns: 2,
     files: [

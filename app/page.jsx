@@ -18,7 +18,7 @@ import Link from "next/link";
 import LandingPageFaq from "./components/main/LandingPageFaq";
 
 export default function Home() {
-  const { ref, inView } = useInView({ triggerOnce: false });
+  const { ref, inView } = useInView({ triggerOnce: true });
   const scrollContainerRef = useRef(null);
 
   return (
@@ -53,7 +53,7 @@ export default function Home() {
               >
                 Browse Components
               </Link>
-              <button>View Documentation</button>
+              <Link href={"/documentation"}>View Documentation</Link>
             </div>
           </div>
           <div className="w-full h-fit flex flex-col items-center">
