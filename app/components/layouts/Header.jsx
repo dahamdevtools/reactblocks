@@ -17,14 +17,17 @@ export default function Header({
   return (
     <div className="w-full h-fit flex flex-col">
       <div className="w-full h-fit flex lg:hidden items-center justify-between p-5 border-b border-neutral-200 dark:border-neutral-800">
-        <div className="w-fit h-fit flex items-center gap-2">
+        <Link
+          href={"/"}
+          className="w-fit h-fit flex items-center gap-2 cursor-pointer"
+        >
           <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
             React
           </h1>
           <span className="text-lg font-semibold px-3 py-1 flex bg-neutral-200 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-xl">
             blocks
           </span>
-        </div>
+        </Link>
         <button
           onClick={() => setOpenSlider(true)}
           className="text-neutral-500 py-2.5 pe-2"
@@ -55,7 +58,7 @@ export default function Header({
           />
         </div>
         <div
-          className={`w-screen h-screen overflow-hidden bg-neutral-50 dark:bg-neutral-900 fixed top-0 left-0 p-10 gap-10 ${
+          className={`w-full h-screen overflow-hidden bg-neutral-50 dark:bg-neutral-900 fixed top-0 left-0 p-10 gap-10 ${
             openSlider ? "translate-x-0" : "translate-x-full"
           } z-50 flex flex-col duration-300 ease-in-out`}
         >
@@ -69,11 +72,23 @@ export default function Header({
           </div>
           <div className="w-full h-full flex flex-col justify-between">
             <div className="w-full h-fit flex flex-col gap-5">
-              <Link href={"#"} className="text-xl">
+              <Link href={"/"} className="text-xl">
                 Home
               </Link>
-              <Link href={"#"} className="text-xl">
+              <Link href={"/components"} className="text-xl">
                 Components
+              </Link>
+              <Link href={"/documentation"} className="text-xl">
+                Docs
+              </Link>
+              <Link href={"/faq"} className="text-xl">
+                FAQ
+              </Link>
+              <Link href={"/about"} className="text-xl">
+                About
+              </Link>
+              <Link href={"/contact"} className="text-xl">
+                Contact
               </Link>
             </div>
             <ThemeSwitcher />
