@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://react-blocks.dev
+
+# Sitemaps
+Sitemap: https://react-blocks.dev/sitemap.xml
