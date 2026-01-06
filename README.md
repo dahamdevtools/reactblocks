@@ -1,7 +1,7 @@
 # ReactBlocks
 
 <div align="center">
-  <img src="/public/icon.svg" alt="ReactBlocks Logo" width="120" height="120">
+  <img src="/public/icon.svg" alt="ReactBlocks Logo" width="40" height="40">
   <h3>Ready-Made React Components for Modern Applications</h3>
   <p>Accelerate your development with fully responsive, production-ready React components. Built with Tailwind CSS. Free and open source.</p>
 
