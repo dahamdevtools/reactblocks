@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "@/lib/utils/ThemeProvider";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,6 +79,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <div className="w-full h-full bg-neutral-200/50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200">
             {children}
+            <Analytics />
           </div>
           <Toaster />
         </Providers>
