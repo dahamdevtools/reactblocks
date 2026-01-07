@@ -3,6 +3,7 @@ import "./globals.css";
 import Providers from "@/lib/utils/ThemeProvider";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/next";
+import GoogleAnalytics from "@/lib/utils/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,19 +69,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MQELL745DZ"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-MQELL745DZ');
-          `}
-        </Script>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -95,6 +83,7 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <div className="w-full h-full bg-neutral-200/50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200">
+            <GoogleAnalytics />
             {children}
             <Analytics />
           </div>
