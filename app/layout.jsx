@@ -72,6 +72,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta
+          name="google-site-verification"
+          content="fHuzGsLgWpJbE5mOnE6YGmC64E_TFWNkWrWH88VX9vw"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen p-0 m-0 flex flex-col items-center bg-white`}
