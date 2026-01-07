@@ -14,7 +14,7 @@ export async function POST(request) {
     }
 
     const notificationEmail = await resend.emails.send({
-      from: "Contact Form <contact@react-block.dev>",
+      from: "Contact Form <contact@react-blocks.dev>",
       to: process.env.YOUR_EMAIL,
       subject: `New Contact Form: ${subject}`,
       html: `
@@ -71,7 +71,7 @@ Do not include a greeting (e.g., "Hi ${name},") or any closing/sign-off — just
     console.log("AI Response generated:", aiGeneratedMessage);
 
     const thankYouEmail = await resend.emails.send({
-      from: "ReactBlocks Team <noreply@react-block.dev>",
+      from: "ReactBlocks Team <noreply@react-blocks.dev>",
       to: email,
       subject: "Thank you for contacting ReactBlocks!",
       html: `
