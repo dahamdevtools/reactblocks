@@ -44,7 +44,7 @@ export default function Navigation({ position, scrollContainerRef }) {
         >
           <Link
             href={"/"}
-            className="w-fit h-fit flex items-center gap-2 cursor-pointer"
+            className="w-fit h-fit flex items-center gap-2 ps-3 cursor-pointer"
           >
             <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
               React
