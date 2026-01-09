@@ -25,7 +25,7 @@ export default function LoginForm() {
           />
         </div>
         <div className="w-full h-fit flex flex-col gap-2">
-          <label htmlFor="email">Password</label>
+          <label htmlFor="password">Password</label>
           <div className="w-full h-12 pe-1.5 rounded-full flex items-center bg-neutral-200/50 dark:bg-neutral-800/60">
             <input
               id="password"
