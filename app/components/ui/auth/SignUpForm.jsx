@@ -112,7 +112,7 @@ export default function SignUpForm() {
               id="confirmPassword"
               type={showConfirmPassword ? "text" : "password"}
               spellCheck="false"
-              placeholder="Enter your Password..."
+              placeholder="Confirm your Password..."
               className="w-full px-6"
             />
             <button

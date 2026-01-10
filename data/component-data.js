@@ -2555,7 +2555,9 @@ export const componentsData = [
       {
         name: "jsx",
         language: "jsx",
-        code: `import Link from "next/link";
+        code: `"use client";
+        
+        import Link from "next/link";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
@@ -2653,7 +2655,9 @@ export default function LoginForm() {
       {
         name: "jsx",
         language: "jsx",
-        code: `import Link from "next/link";
+        code: `"use client";
+        
+        import Link from "next/link";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
@@ -2767,7 +2771,7 @@ export default function SignUpForm() {
               id="confirmPassword"
               type={showConfirmPassword ? "text" : "password"}
               spellCheck="false"
-              placeholder="Enter your Password..."
+              placeholder="Confirm your Password..."
               className="w-full px-6"
             />
             <button
