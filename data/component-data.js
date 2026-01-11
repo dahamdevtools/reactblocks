@@ -56,6 +56,8 @@ import FullBleedImageCard from "@/app/components/ui/cards/FullBleedImageCard";
 import ImageContentCard from "@/app/components/ui/cards/ImageContentCard";
 import SimpleTicker from "@/app/components/ui/tickers/SimpleTicker";
 import MaskedTicker from "@/app/components/ui/tickers/MaskedTicker";
+import HorizontalDivider from "@/app/components/ui/dividers/HorizontalDivider";
+import VerticalDivider from "@/app/components/ui/dividers/VerticalDivider";
 
 export const componentsData = [
   // avatars
@@ -3380,6 +3382,65 @@ export default function MaskedTicker({
         <p className="text-3xl font-extrabold dark:text-white">GSAP</p>
       </MaskedTicker>
     ),
+  },
+  // dividers
+  {
+    id: "horizontal-divider",
+    name: "Horizontal Divider",
+    description:
+      "Horizontal divider with centered text label. Commonly used to separate form sections or indicate alternative options.",
+    category: "Dividers",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/dividers/HorizontalDivider.jsx",
+    tags: ["divider", "separator", "horizontal", "or", "section"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function HorizontalDivider() {
+  return (
+    <div className="w-full h-fit flex items-center gap-3">
+      <div className="w-full h-0.5 bg-neutral-200 dark:bg-neutral-800"></div>
+      <span className="w-fit h-fit flex text-neutral-400 dark:text-neutral-600">
+        OR
+      </span>
+      <div className="w-full h-0.5 bg-neutral-200 dark:bg-neutral-800"></div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <HorizontalDivider />,
+  },
+  {
+    id: "vertical-divider",
+    name: "Vertical Divider",
+    description:
+      "Vertical divider with centered text label. Useful for separating content in horizontal layouts or sidebars.",
+    category: "Dividers",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/dividers/VerticalDivider.jsx",
+    tags: ["divider", "separator", "vertical", "or", "sidebar"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function VerticalDivider() {
+  return (
+    <div className="h-full w-fit flex flex-col items-center gap-3">
+      <div className="h-full w-0.5 bg-neutral-200 dark:bg-neutral-800"></div>
+      <span className="w-fit h-fit text-neutral-400 dark:text-neutral-600">
+        OR
+      </span>
+      <div className="h-full w-0.5 bg-neutral-200 dark:bg-neutral-800"></div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <VerticalDivider />,
   },
 ];
 
