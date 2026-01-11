@@ -3139,11 +3139,11 @@ export default function SignUpForm() {
     id: "simple-ticker",
     name: "Simple Ticker",
     description:
-      "Italic text element for quotes, emphasis, or foreign words. Includes quotation marks styling.",
+      "Infinite scrolling ticker with configurable direction, speed, and gap. Uses GSAP for smooth animation with customizable duplicates.",
     category: "Tickers",
     githubLink:
       "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/tickers/SimpleTicker.jsx",
-    tags: ["text", "italic", "quote", "inline"],
+    tags: ["ticker", "marquee", "scroll", "animation", "infinite"],
     columns: 2,
     files: [
       {
@@ -3262,11 +3262,11 @@ export default function SimpleTicker({
     id: "masked-ticker",
     name: "Masked Ticker",
     description:
-      "Italic text element for quotes, emphasis, or foreign words. Includes quotation marks styling.",
+      "Infinite scrolling ticker with gradient fade masks on edges. Same GSAP animation as Simple Ticker with added visual polish for seamless loops.",
     category: "Tickers",
     githubLink:
       "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/tickers/MaskedTicker.jsx",
-    tags: ["text", "italic", "quote", "inline"],
+    tags: ["ticker", "marquee", "scroll", "animation", "gradient", "fade"],
     columns: 2,
     files: [
       {
