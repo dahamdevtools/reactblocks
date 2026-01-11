@@ -54,6 +54,8 @@ import DualActionCTA from "@/app/components/ui/layouts/DualActionCTA";
 import IconFeatureCard from "@/app/components/ui/cards/IconFeatureCard";
 import FullBleedImageCard from "@/app/components/ui/cards/FullBleedImageCard";
 import ImageContentCard from "@/app/components/ui/cards/ImageContentCard";
+import SimpleTicker from "@/app/components/ui/tickers/SimpleTicker";
+import MaskedTicker from "@/app/components/ui/tickers/MaskedTicker";
 
 export const componentsData = [
   // avatars
@@ -3131,6 +3133,253 @@ export default function SignUpForm() {
       },
     ],
     component: () => <ItalicText />,
+  },
+  // tickers
+  {
+    id: "simple-ticker",
+    name: "Simple Ticker",
+    description:
+      "Italic text element for quotes, emphasis, or foreign words. Includes quotation marks styling.",
+    category: "Tickers",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/tickers/SimpleTicker.jsx",
+    tags: ["text", "italic", "quote", "inline"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef, Children } from "react";
+
+export default function SimpleTicker({
+  children,
+  direction = 1,
+  gap = 16,
+  speed = 50,
+  duplicates = 5,
+}) {
+  const containerRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useGSAP(() => {
+    const container = containerRef.current;
+    const content = contentRef.current;
+    const contentWidth = content.offsetWidth;
+
+    const clone = content.cloneNode(true);
+    container.appendChild(clone);
+
+    const duration = contentWidth / speed / 10;
+
+    const tween = gsap.to(container, {
+      x: direction > 0 ? \`\-=\${contentWidth}\` : \`\+=\${contentWidth}\`,
+      duration: duration,
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: (x) => {
+          const value = parseFloat(x);
+          if (direction > 0) {
+            return \`\${value % contentWidth}px\`;
+          } else {
+            return \`\${
+              ((value % contentWidth) - contentWidth) % contentWidth
+            }px\`;
+          }
+        },
+      },
+    });
+
+    return () => {
+      tween.kill();
+      if (container.contains(clone)) {
+        container.removeChild(clone);
+      }
+    };
+  }, [direction, speed, children, gap, duplicates]);
+
+  const allChildren = [];
+  const childrenArray = Children.toArray(children);
+
+  for (let i = 0; i < duplicates; i++) {
+    childrenArray.forEach((child, index) => {
+      allChildren.push(
+        <div key={\`\${i}-\${index}\`} style={{ marginRight: \`\${gap}px\` }}>
+          {child}
+        </div>
+      );
+    });
+  }
+
+  return (
+    <div className="relative overflow-hidden w-full py-6 border-x border-neutral-200 dark:border-neutral-800">
+      <div
+        ref={containerRef}
+        className="flex whitespace-nowrap will-change-transform"
+      >
+        <div ref={contentRef} className="flex items-center">
+          {allChildren}
+        </div>
+      </div>
+    </div>
+  );
+}`,
+      },
+      {
+        name: "requirements",
+        language: "jsx",
+        code: `npm install @gsap/react`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<SimpleTicker direction={-1} gap={64} speed={20} duplicates={2}>
+        <p className="text-3xl font-extrabold dark:text-white">Next.js</p>
+        <p className="text-3xl font-extrabold dark:text-white">React</p>
+        <p className="text-3xl font-extrabold dark:text-white">Tailwind CSS</p>
+        <p className="text-3xl font-extrabold dark:text-white">JavaScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">TypeScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">GSAP</p>
+      </SimpleTicker>`,
+      },
+    ],
+    component: () => (
+      <SimpleTicker direction={-1} gap={64} speed={20} duplicates={2}>
+        <p className="text-3xl font-extrabold dark:text-white">Next.js</p>
+        <p className="text-3xl font-extrabold dark:text-white">React</p>
+        <p className="text-3xl font-extrabold dark:text-white">Tailwind CSS</p>
+        <p className="text-3xl font-extrabold dark:text-white">JavaScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">TypeScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">GSAP</p>
+      </SimpleTicker>
+    ),
+  },
+  {
+    id: "masked-ticker",
+    name: "Masked Ticker",
+    description:
+      "Italic text element for quotes, emphasis, or foreign words. Includes quotation marks styling.",
+    category: "Tickers",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/tickers/MaskedTicker.jsx",
+    tags: ["text", "italic", "quote", "inline"],
+    columns: 2,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef, Children } from "react";
+
+export default function MaskedTicker({
+  children,
+  direction = 1,
+  gap = 16,
+  speed = 50,
+  duplicates = 5,
+}) {
+  const containerRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useGSAP(() => {
+    const container = containerRef.current;
+    const content = contentRef.current;
+    const contentWidth = content.offsetWidth;
+
+    const clone = content.cloneNode(true);
+    container.appendChild(clone);
+
+    const duration = contentWidth / speed / 10;
+
+    const tween = gsap.to(container, {
+      x: direction > 0 ? \`\-=\${contentWidth}\` : \`\+=\${contentWidth}\`,
+      duration: duration,
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: (x) => {
+          const value = parseFloat(x);
+          if (direction > 0) {
+            return \`\${value % contentWidth}px\`;
+          } else {
+            return \`\${
+              ((value % contentWidth) - contentWidth) % contentWidth
+            }px\`;
+          }
+        },
+      },
+    });
+
+    return () => {
+      tween.kill();
+      if (container.contains(clone)) {
+        container.removeChild(clone);
+      }
+    };
+  }, [direction, speed, children, gap, duplicates]);
+
+  const allChildren = [];
+  const childrenArray = Children.toArray(children);
+
+  for (let i = 0; i < duplicates; i++) {
+    childrenArray.forEach((child, index) => {
+      allChildren.push(
+        <div key={\`\${i}-\${index}\`} style={{ marginRight: \`\${gap}px\` }}>
+          {child}
+        </div>
+      );
+    });
+  }
+
+  return (
+    <div className="relative overflow-hidden w-full py-6 mask-l-from-70% mask-r-from-70%">
+      <div
+        ref={containerRef}
+        className="flex whitespace-nowrap will-change-transform"
+      >
+        <div ref={contentRef} className="flex items-center">
+          {allChildren}
+        </div>
+      </div>
+    </div>
+  );
+}`,
+      },
+      {
+        name: "requirements",
+        language: "jsx",
+        code: `npm install @gsap/react`,
+      },
+      {
+        name: "usage",
+        language: "jsx",
+        code: `<MaskedTicker direction={-1} gap={64} speed={20} duplicates={2}>
+        <p className="text-3xl font-extrabold dark:text-white">Next.js</p>
+        <p className="text-3xl font-extrabold dark:text-white">React</p>
+        <p className="text-3xl font-extrabold dark:text-white">Tailwind CSS</p>
+        <p className="text-3xl font-extrabold dark:text-white">JavaScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">TypeScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">GSAP</p>
+      </MaskedTicker>`,
+      },
+    ],
+    component: () => (
+      <MaskedTicker direction={-1} gap={64} speed={20} duplicates={2}>
+        <p className="text-3xl font-extrabold dark:text-white">Next.js</p>
+        <p className="text-3xl font-extrabold dark:text-white">React</p>
+        <p className="text-3xl font-extrabold dark:text-white">Tailwind CSS</p>
+        <p className="text-3xl font-extrabold dark:text-white">JavaScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">TypeScript</p>
+        <p className="text-3xl font-extrabold dark:text-white">GSAP</p>
+      </MaskedTicker>
+    ),
   },
 ];
 
