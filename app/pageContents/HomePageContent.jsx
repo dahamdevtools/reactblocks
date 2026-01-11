@@ -75,14 +75,14 @@ export default function HomePageContent() {
                   <span className="w-3 aspect-square rounded-full bg-emerald-300 dark:bg-emerald-500"></span>
                 </span>
                 <p className="text-sm sm:text-base">
-                  40+ Components and Growing
+                  50+ Components and Growing
                 </p>
               </div>
               <h1 className="text-5xl sm:text-7xl font-extrabold text-center">
                 Ready-Made React Components for Modern Applications
               </h1>
               <h3 className="text-lg sm:text-2xl text-center text-neutral-500">
-                Accelerate your development with 40+ fully responsive,
+                Accelerate your development with 50+ fully responsive,
                 production-ready React components. Built with Tailwind CSS. No
                 setup, no dependencies.
               </h3>

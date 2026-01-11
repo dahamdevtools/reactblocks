@@ -45,6 +45,15 @@ import VerticalProductImageGallery from "@/app/components/ui/imageGalleries/Vert
 import HorizontalProductImageGallery from "@/app/components/ui/imageGalleries/HorizontalProductImageGallery";
 import LoginForm from "@/app/components/ui/auth/LoginForm";
 import SignUpForm from "@/app/components/ui/auth/SignUpForm";
+import BoldText from "@/app/components/ui/typography/BoldText";
+import BadgeText from "@/app/components/ui/typography/BadgeText";
+import UnderlinedText from "@/app/components/ui/typography/UnderlinedText";
+import ItalicText from "@/app/components/ui/typography/ItalicText";
+import SingleActionCTA from "@/app/components/ui/layouts/SingleActionCTA";
+import DualActionCTA from "@/app/components/ui/layouts/DualActionCTA";
+import IconFeatureCard from "@/app/components/ui/cards/IconFeatureCard";
+import FullBleedImageCard from "@/app/components/ui/cards/FullBleedImageCard";
+import ImageContentCard from "@/app/components/ui/cards/ImageContentCard";
 
 export const componentsData = [
   // avatars
@@ -2077,6 +2086,79 @@ export const componentsData = [
     ],
     component: () => <CallToActionBanner />,
   },
+  {
+    id: "single-action-cta",
+    name: "Single Action CTA Block",
+    description:
+      "Simple centered call-to-action block with headline, description, and single action button. Minimal and focused layout.",
+    category: "Layouts",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/layouts/SingleActionCTA.jsx",
+    tags: ["cta", "centered", "simple", "marketing"],
+    columns: 1,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function SingleActionCTA() {
+  return (
+    <div className="w-full max-w-3xl h-fit flex flex-col items-center rounded-3xl p-8 pt-10 sm:pt-12 gap-4 bg-neutral-200/50 dark:bg-neutral-800/60">
+      <h3 className="text-2xl sm:text-3xl font-extrabold text-center">
+        Ready to Build Faster?
+      </h3>
+      <p className="text-xl text-center px-0 sm:px-12 text-neutral-500">
+        Explore 50+ handcrafted React components and ship beautiful interfaces
+        in minutes.
+      </p>
+      <button className="w-fit h-fit px-8 py-3.5 rounded-2xl cursor-pointer bg-neutral-300 dark:bg-neutral-900">
+        Browse Components
+      </button>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <SingleActionCTA />,
+  },
+  {
+    id: "dual-action-cta",
+    name: "Dual Action CTA Block",
+    description:
+      "Call-to-action block with two action buttons for primary and secondary choices. Useful for FAQ or contact sections.",
+    category: "Layouts",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/layouts/DualActionCTA.jsx",
+    tags: ["cta", "buttons", "dual", "action", "banner"],
+    columns: 1,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function DualActionCTA() {
+  return (
+    <div className="w-full max-w-3xl h-fit flex flex-col rounded-3xl p-8 pt-10 sm:pt-12 gap-4 bg-neutral-200/50 dark:bg-neutral-800/60">
+      <h3 className="text-2xl sm:text-3xl font-extrabold text-center">
+        Need More Help?
+      </h3>
+      <p className="text-xl text-center px-0 sm:px-12 text-neutral-500">
+        Still can't find what you're looking for? Check our FAQ or reach out
+        directly.
+      </p>
+      <div className="w-full flex flex-wrap items-center justify-center gap-3.5">
+        <button className="w-fit h-fit px-8 py-3.5 rounded-2xl cursor-pointer bg-neutral-300/50 dark:bg-neutral-800">
+          View FAQ
+        </button>
+        <button className="w-fit h-fit px-8 py-3.5 rounded-2xl cursor-pointer bg-neutral-300 dark:bg-neutral-900/50">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <DualActionCTA />,
+  },
   // testimonials
   {
     id: "quote-first-testimonial",
@@ -2818,6 +2900,237 @@ export default function SignUpForm() {
       },
     ],
     component: () => <SignUpForm />,
+  },
+  // cards
+  {
+    id: "image-content-card",
+    name: "Image Content Card",
+    description:
+      "Card component with image, title, description, tags, and action button. Image and container have rounded corners.",
+    category: "Cards",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/cards/ImageContentCard.jsx",
+    tags: ["card", "image", "tags", "product"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function ImageContentCard() {
+  return (
+    <div className="w-full h-fit flex flex-col p-5 gap-5 rounded-3xl bg-neutral-200/50 dark:bg-neutral-800/60">
+      <img
+        className="w-full aspect-video object-cover object-center rounded-xl"
+        src="/img_url"
+        alt="image"
+      />
+      <div className="w-full h-fit flex flex-col gap-3.5 px-1.5">
+        <h4 className="text-xl font-semibold">Urban Street Photography</h4>
+        <p className="text-ellipsis line-clamp-2 text-neutral-500">
+          Capturing the energy and motion of everyday city life from fleeting
+          expressions to vibrant colors hidden in plain sight.
+        </p>
+        <div className="w-full flex flex-wrap gap-2">
+          <span className="text-sm px-3.5 py-1 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-500 rounded-lg select-none">
+            photography
+          </span>
+          <span className="text-sm px-3.5 py-1 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-500 rounded-lg select-none">
+            urban
+          </span>
+          <span className="text-sm px-3.5 py-1 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-500 rounded-lg select-none">
+            portfolio
+          </span>
+        </div>
+      </div>
+      <button className="w-full h-fit px-5 py-3 rounded-xl cursor-pointer bg-neutral-200 dark:bg-neutral-800">
+        View Gallery
+      </button>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <ImageContentCard />,
+  },
+  {
+    id: "full-bleed-image-card",
+    name: "Full Bleed Image Card",
+    description:
+      "Card with a full bleed image. Content section below includes title, description, tags, and a button.",
+    category: "Cards",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/cards/FullBleedImageCard.jsx",
+    tags: ["card", "image", "overflow", "blog"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `export default function FullBleedImageCard() {
+  return (
+    <div className="w-full h-fit flex flex-col rounded-3xl overflow-hidden bg-neutral-200/50 dark:bg-neutral-800/60">
+      <img
+        className="w-full aspect-video object-cover object-center"
+        src="/img_url"
+        alt="image"
+      />
+      <div className="w-full h-fit flex flex-col gap-5 p-5">
+        <div className="w-full h-fit flex flex-col gap-3.5 px-1.5">
+          <h4 className="text-xl font-semibold">Urban Street Photography</h4>
+          <p className="text-ellipsis line-clamp-2 text-neutral-500">
+            Capturing the energy and motion of everyday city life from fleeting
+            expressions to vibrant colors hidden in plain sight.
+          </p>
+          <div className="w-full flex flex-wrap gap-2">
+            <span className="text-sm px-3.5 py-1 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-500 rounded-lg select-none">
+              photography
+            </span>
+            <span className="text-sm px-3.5 py-1 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-500 rounded-lg select-none">
+              urban
+            </span>
+            <span className="text-sm px-3.5 py-1 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-500 rounded-lg select-none">
+              portfolio
+            </span>
+          </div>
+        </div>
+        <button className="w-full h-fit px-5 py-3 rounded-xl cursor-pointer bg-neutral-200 dark:bg-neutral-800">
+          View Gallery
+        </button>
+      </div>
+    </div>
+  );
+}`,
+      },
+    ],
+    component: () => <FullBleedImageCard />,
+  },
+  {
+    id: "icon-feature-card",
+    name: "Icon Feature Card",
+    description:
+      "Feature card with icon, title, and description. Clean layout for showcasing product features or benefits.",
+    category: "Cards",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/cards/IconFeatureCard.jsx",
+    tags: ["card", "feature", "icon", "benefits"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `"use client";
+        
+        import { IoFlash } from "react-icons/io5";
+        
+        export default function IconFeatureCard() {
+          return (
+            <div className="w-full h-fit flex flex-col p-7 gap-7 rounded-4xl bg-neutral-200/50 dark:bg-neutral-800/60">
+              <div className="w-18 aspect-square rounded-xl flex items-center justify-center bg-neutral-200 dark:bg-neutral-800">
+                <IoFlash className="text-3xl text-neutral-400 dark:text-neutral-600" />
+              </div>
+              <div className="w-full h-fit flex flex-col gap-2 px-1.5">
+                <h4 className="text-xl font-semibold">Fast Integration</h4>
+                <p className="text-ellipsis line-clamp-2 text-neutral-500">
+                  Copy, paste, and start building immediately. No setup or configuration
+                  required.
+                </p>
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        name: "requirements",
+        language: "jsx",
+        code: `npm i react-icons`,
+      },
+    ],
+    component: () => <IconFeatureCard />,
+  },
+  // typography
+  {
+    id: "bold-text",
+    name: "Bold Text",
+    description:
+      "Bold inline text element for emphasizing important words or phrases within content.",
+    category: "Typography",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/typography/BoldText.jsx",
+    tags: ["text", "emphasis", "inline"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `<strong className="text-neutral-800 dark:text-neutral-300">
+        attention to detail
+      </strong>`,
+      },
+    ],
+    component: () => <BoldText />,
+  },
+  {
+    id: "badge-text",
+    name: "Badge Text",
+    description:
+      "Inline badge element for labels, tags, code blocks, or status indicators. Works well within sentences or as standalone labels.",
+    category: "Typography",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/typography/BadgeText.jsx",
+    tags: ["badge", "label", "tag", "inline"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `<span className="text-base text-nowrap px-2.5 py-1 rounded-md bg-neutral-200 dark:bg-neutral-800">
+        Pro Plan
+      </span>`,
+      },
+    ],
+    component: () => <BadgeText />,
+  },
+  {
+    id: "underlined-text",
+    name: "Underlined Text",
+    description:
+      "Underlined text element for subtle emphasis or highlighting key terms within content.",
+    category: "Typography",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/typography/UnderlinedText.jsx",
+    tags: ["text", "underline", "emphasis", "inline"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `<strong className="underline underline-offset-2 text-neutral-800 dark:text-neutral-300">
+        consistency
+      </strong>`,
+      },
+    ],
+    component: () => <UnderlinedText />,
+  },
+  {
+    id: "italic-text",
+    name: "Italic Text",
+    description:
+      "Italic text element for quotes, emphasis, or foreign words. Includes quotation marks styling.",
+    category: "Typography",
+    githubLink:
+      "https://github.com/dahamdevtools/reactblocks/blob/main/app/components/ui/typography/ItalicText.jsx",
+    tags: ["text", "italic", "quote", "inline"],
+    columns: 3,
+    files: [
+      {
+        name: "jsx",
+        language: "jsx",
+        code: `<strong className="italic text-neutral-800 dark:text-neutral-300">
+        "possibility"
+      </strong>`,
+      },
+    ],
+    component: () => <ItalicText />,
   },
 ];
 

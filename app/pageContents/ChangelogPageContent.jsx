@@ -15,7 +15,7 @@ export default function ChangeLogPageContent() {
       type: "launch",
       items: [
         "Initial release of ReactBlocks",
-        "Introduced 40+ production-ready components built with React and Tailwind CSS",
+        "Introduced 50+ production-ready components built with React and Tailwind CSS",
         "Organized into 8 categories: Buttons, Forms, Navigation, Layouts, Modals, Cards, Lists, and Utilities",
         "Full dark mode support out of the box using Tailwind's dark: variant",
         "All components designed to be fully responsive across breakpoints",

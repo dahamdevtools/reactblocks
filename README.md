@@ -16,7 +16,7 @@
 
 ## 🚀 Features
 
-- **40+ Components** - Growing library of production-ready components
+- **50+ Components** - Growing library of production-ready components
 - **Fast Integration** - Copy, paste, and start building immediately
 - **Tailwind CSS Powered** - Fully styled with utility classes, easy to customize
 - **Dark Mode Support** - Every component supports dark mode out of the box

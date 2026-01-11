@@ -173,7 +173,7 @@ export default function AboutPageContent() {
                 Ready to Build Faster?
               </h3>
               <p className="text-xl text-center text-neutral-500">
-                Explore 40+ handcrafted React components and ship beautiful
+                Explore 50+ handcrafted React components and ship beautiful
                 interfaces in minutes.
               </p>
               <Link
